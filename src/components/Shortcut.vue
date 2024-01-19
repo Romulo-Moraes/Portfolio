@@ -1,7 +1,6 @@
 <script >
     import { ref } from 'vue';
 
-
     export default{
         props: [
             'backcolor',
@@ -48,7 +47,6 @@
 
             changeShortcutOpacity(opacity, toIncrement){
                 let intervalHandler = setInterval(() => {
-                    console.log("soidfjdsif");
                     this.$refs.componentRef.style.opacity = opacity.toString();
 
                     opacity = toIncrement ? opacity + 0.1 : opacity - 0.1; 
@@ -79,7 +77,7 @@
 <template>
     <section ref="componentRef" class="shortcut-component">
         <div class="optionCircle" :style="cssProps">
-            <p v-if="true">{{ content }}</p>
+            <p v-if="theContentIsString">{{ content }}</p>
             <img v-else :src="getImageURL()" alt="">
         </div>
         <p class="component-text">{{ shortcutText }}</p>
@@ -88,16 +86,19 @@
 
 <style>
     .shortcut-component{
+        position: relative;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
         padding-top: 15%;
         opacity: 0;
+        z-index: 2;
     }
 
     .component-text{
         margin: 0;
+        color: white;
     }
 
     .optionCircle{
@@ -114,6 +115,7 @@
 
     .optionCircle > p{
         color: var(--shortcut-foreground-color);
+        font-size: 80%;
     }
 
     .optionCircle > img{

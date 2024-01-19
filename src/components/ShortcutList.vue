@@ -1,8 +1,6 @@
-<script lang="ts">
-    import { ref, type Ref } from 'vue';
+<script>
+    import { ref } from 'vue';
     import Shortcut from './Shortcut.vue';
-
-    type PossibleEntries = 'languageShortcutRef' | 'aboutMeShortcutRef' | 'abilitiesShortcutRef' | 'projectsShortcutRef' | 'hireMeShortcutRef';
 
     export default{
         name: 'shortcut-list',
@@ -22,24 +20,17 @@
             }
         },
         methods : {
-            access(str : PossibleEntries){
-                return this.$refs[str];
-            },
-
             toggleOptionsVisibility(){
-                
-
-                const keys = Object.keys(this.shortcutReferences);
-                let keysLength = keys.length;
+                let referencesKeys = Object.keys(this.$refs);
                 let i = 0;
-               
+                
                 let intervalHandler = setInterval(() => {
-                    let element : Ref<typeof Shortcut> = this.access(keys[i] as PossibleEntries);
-                    
-                    if(element !== undefined && element !== null){
-                        element.toggleVisibility();
+                    if(i >= referencesKeys.length){
+                        clearInterval(intervalHandler);
+                    }else{
+                        this.$refs[`${referencesKeys[i++]}`].toggleVisibility();
                     }
-                })
+                }, 25);
             }
         },
         mounted(){
@@ -56,10 +47,10 @@
             <div class="options-icon-line"></div>
         </div>
         <div class="options-n-shortcuts">
-            <Shortcut ref="languageShortcutRef" shortcut-text="Língua" backcolor="light" content="PT" the-content-is-string="true"/>
+            <Shortcut ref="languageShortcutRef" shortcut-text="Língua" backcolor="light" content="PT" :the-content-is-string="true"/>
             <Shortcut ref="aboutMeShortcutRef" shortcut-text="Sobre mim" backcolor="dark" content="whoAmI.png" :the-content-is-string="false" adjust-image-dimensions="80%"/>
             <Shortcut ref="abilitiesShortcutRef" shortcut-text="Habilidades" backcolor="dark" content="abilities.png" :the-content-is-string="false" adjust-image-dimensions="100%"/>
-            <Shortcut ref="projectsShortcutRef" shortcut-text="Projetos" backcolor="dark" content="Projects" the-content-is-string="true"/>
+            <Shortcut ref="projectsShortcutRef" shortcut-text="Projetos" backcolor="dark" content="Projects" :the-content-is-string="true"/>
             <Shortcut ref="hireMeShortcutRef" shortcut-text="Contrate-me" backcolor="dark" content="hireMe.png" :the-content-is-string="false" adjust-image-dimensions="100%"/>
         </div>
     </section>
@@ -67,16 +58,17 @@
 
 <style>
     .options-icon-line{
-        width: 100%;
-        height: 10px;
-        background-color: black;
+        width: 50px;
+        height: 7px;
+        background-color: white;
         border-radius: 10px;
         position: relative;
     }
 
     .options-icon{
-        width: 55px;
-        height: 55px;
+        position: relative;
+        width: 100%;
+        height: 50px;
         display: flex;
         flex-direction: column;
         justify-content: space-around;
@@ -84,9 +76,10 @@
         cursor: pointer;
     }
     .options-shortcuts-holder{
-        position: absolute;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+        position: relative;
+    }
+
+    .options-n-shortcuts{
+        margin-top: 15%;
     }
 </style>
