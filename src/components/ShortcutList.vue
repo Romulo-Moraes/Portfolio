@@ -81,5 +81,6 @@
 
     .options-n-shortcuts{
         margin-top: 15%;
+        position: relative;
     }
 </style>

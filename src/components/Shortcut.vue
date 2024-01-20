@@ -93,7 +93,7 @@
         align-items: center;
         padding-top: 15%;
         opacity: 0;
-        z-index: 2;
+        z-index: 4;
     }
 
     .component-text{

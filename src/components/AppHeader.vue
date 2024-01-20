@@ -1,39 +1,50 @@
 <script>
     import ShortcutListVue from './ShortcutList.vue';
+    import Overlay from './Overlay.vue';
 
     export default{
         components: {
-            ShortcutListVue
+            ShortcutListVue,
+            Overlay
         }
     }
 </script>
 
 <template>
-    <header class="app-header">
-        <div class="name align-center">
-            <p>Rômulo Peres de Moraes</p>
+        <Overlay color="black" :opacity="0.6" :zindex="1" height="95px"/>
+
+        <div class="app-header">
+            <div class="name">
+                <p>Rômulo Peres de Moraes</p>
+            </div>
+            <div class="options-place">
+                <ShortcutListVue />
+            </div>
         </div>
-        <div class="options-place">
-            <ShortcutListVue />
-        </div>
-    </header>
 </template>
 
 <style>
     .app-header{
+        position: relative;
         width: 100%;
-        height: 95px;
+        height: inherit;
         display: grid;
-        grid-template-columns: 80% calc(20% - 80px) 80px;
+        grid-template-columns: 50% 50%;
         grid-template-rows: 100%;
-        grid-template-areas: "name . options";
+        z-index: 10;
+        grid-template-areas: "name options";
     }
 
     .name{
         grid-area: name;
         color: white;
-        font-size: 180%;
-        letter-spacing: 1pt;
+        font-size: 160%;
+        display: flex;
+        flex-direction: row;
+        justify-content: right;
+        align-items: center;
+        max-width: 340px;
+        min-width: 288px;
     }
 
     .align-center{
@@ -47,30 +58,8 @@
         grid-area: options;
         display: flex;
         flex-direction: column;
-        align-items: center;
+        align-items: end;
     }
 
-    @media screen and (min-width:531px){
-        .app-header{
-            grid-template-columns: 75% calc(25% - 80px) 80px;
-        }
-    }
 
-    @media screen and (min-width:620px){
-        .app-header{
-            grid-template-columns: 60% calc(40% - 80px) 80px;
-        }
-    }
-
-    @media screen and (min-width:900px){
-        .app-header{
-            grid-template-columns: 45% calc(55% - 80px) 80px;
-        }
-    }
-
-    @media screen and (min-width:1220px){
-        .app-header{
-            grid-template-columns: 35% calc(65% - 80px) 80px;
-        }
-    }
 </style>
