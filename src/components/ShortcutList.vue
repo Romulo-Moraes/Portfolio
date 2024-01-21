@@ -58,8 +58,8 @@
 
 <style>
     .options-icon-line{
-        width: 50px;
-        height: 7px;
+        width: 42.5px;
+        height: 5px;
         background-color: white;
         border-radius: 10px;
         position: relative;
@@ -68,8 +68,9 @@
     .options-icon{
         position: relative;
         width: 100%;
-        height: 50px;
+        height: 50%;
         display: flex;
+        padding-top: 5%;
         flex-direction: column;
         justify-content: space-around;
         align-items: center;
@@ -77,10 +78,38 @@
     }
     .options-shortcuts-holder{
         position: relative;
+        padding-right: 10%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 
     .options-n-shortcuts{
+        width: 100%;
         margin-top: 15%;
-        position: relative;
+        position: absolute;
+        display: flex;
+        justify-content: left;
+        flex-direction: column;
+        z-index: 50;
+    }
+
+    @media screen and (orientation: landscape){
+        .options-icon-line{
+            width: 45px;
+            height: 7px;
+            background-color: white;
+            border-radius: 10px;
+            position: relative;
+        }
+
+        .options-icon{
+            height: 60%;    
+        }
+
+        .options-shortcuts-holder{
+            padding-right: 5%;
+        }
     }
 </style>

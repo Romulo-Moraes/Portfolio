@@ -49,14 +49,15 @@ import { ref } from 'vue';
     <header id="view-header" ref="headerElementReference">
       <AppHeader />
     </header>
-    <main id="page-content">
-      <section id="first-page" ref="firstPageElementReference">
+    <main>
+        <section id="first-page" ref="firstPageElementReference">
         <Apresentation />
       </section>
       <section id="about-me">
         <AboutMe />
       </section>
-   </main>
+    </main>
+    
   </div>
   
 </template>
@@ -78,10 +79,12 @@ import { ref } from 'vue';
     }
 
     #about-me{
+      height: auto;
       display: flex;
       justify-content: center;
       align-items: center;
       background-color: black;
+      grid-area: about-me;
     }
 
     #page-content{
@@ -91,13 +94,16 @@ import { ref } from 'vue';
     }
 
     #view-wrapper{
+      width: 100vw;
       display: flex;
       flex-direction: column;
+      z-index: 20;
     }
 
     #view-header{
       z-index: 3;
-      height: 95px;
+      position: relative;
+      height: 13dvh;
     }
 
     main{
@@ -109,15 +115,27 @@ import { ref } from 'vue';
     }
 
     #first-page{
+      display: flex;
+      flex-direction: column;
       position: relative;
-      grid-area: first;
-      height: calc(100vh - 95px);
-      min-height: 367px;
+      height: 87dvh;
     }
 
     .background-image{
         position: absolute;
         width: 100vw;
         height: 100vh;
+    }
+
+    @media screen and (orientation: landscape) {
+      #view-header{
+        height: 25dvh;
+      } 
+      #first-page{
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        height: 80dvh;
+      }
     }
 </style>

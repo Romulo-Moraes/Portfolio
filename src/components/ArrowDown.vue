@@ -1,11 +1,21 @@
 <script>
     export default{
+        props: [
+            'dimensions'
+        ],
         
+        computed: {
+            cssProps(){
+                return {
+                    '--arrow-dimensions' : this.$props.dimensions
+                }
+            }
+        }
     }
 </script>
 
 <template>
-    <div class="arrow">
+    <div class="arrow" :style="cssProps">
         <div class="line"></div>
         <div class="line"></div>
     </div>
@@ -14,29 +24,30 @@
 <style>
 
     .line{
-        width: 20px;
-        height: 5px;
+        width: 50%;
+        height: 12.5%;
         border-radius: 50px;
         background-color: white;
-        position: absolute;
+        position: relative;
     }
 
     .line:nth-child(1){
         transform: rotateZ(60deg);
-        translate: -5px;
+        translate: 25%;
     }
 
     .line:nth-child(2){
         transform: rotateZ(-60deg);
-        translate: 5px;
+        translate: -25%;
     }
 
     .arrow{
+        flex-direction: row;
         display: flex;
         justify-content: center;
         align-items: center;
-        width: 40px;
-        height: 40px;
+        width: var(--arrow-dimensions);
+        height: var(--arrow-dimensions);
         border: 2px solid white;
         border-radius: 50%;
     }

@@ -45,9 +45,9 @@ import { ref } from 'vue';
         </div>
 
         <div class="content-wrapper">
-            <h1 :class="this.dynamicAboutMeTitleClass">Sobre mim</h1>
+            <h1 :class="this.dynamicAboutMeTitleClass" id="about-me-title">Sobre mim</h1>
         
-            <div :class="this.dynamicAboutMeClass">
+            <div :class="this.dynamicAboutMeClass" id="about-me-text">
                 <p>Olá! Sou Rômulo Peres de Moraes, sou apaixonado a nível de entusiasmo pela a área de programação e tecnologia.</p>
                 <p>Desde a minha infância eu tenho um interesse genuíno por computadores, passava o dia vendo videos sobre programação, mesmo não entendendo muito sobre o que se falava neles</p>
                 <p>Atualmente eu sempre busco aprender mais sobre a área da T.I, faço contato com linguagens de programação, diferentes sistemas operacionais, estruturas de dados e muito mais.</p>
@@ -64,10 +64,9 @@ import { ref } from 'vue';
     .content-wrapper{
         width: 85%;
         z-index: 3;
-        padding-top: 2%;
     }
 
-    .content-wrapper > div > p ~ p{
+    #about-me-text > p ~ p{
         margin-top: 7%;
     }
 
@@ -80,10 +79,10 @@ import { ref } from 'vue';
     .my-picture{
         transition: 1s;
         width: 100%;
-        height: 100vh;
+        height: 100%;
         position: absolute;
         display: flex;
-        justify-content: right;
+        justify-content: center;
         align-items: center;
         z-index: 1;
     }
@@ -93,17 +92,20 @@ import { ref } from 'vue';
         display: flex;
         justify-content: center;
         padding-top: 2%;
+        padding-bottom: 2%;
         z-index: 3;
     }
 
     .about-me-component{
         position: relative;
         width: 100%;
-        min-height: 100vh;        
+        height: auto;
+        min-height: 100vh;
         display: flex;
         justify-content: center;
         align-items: center;
         flex-direction: column;
+        padding-top: 2%;
     }
 
     .about-me-text{
@@ -136,35 +138,26 @@ import { ref } from 'vue';
         opacity: 0.1;
     }
 
-    @media screen and (min-width:600px) {
+    @media screen and (orientation: landscape) {
         .picture{
-            width: 80%;
+            width: 55%;
+        }
+        
+        #about-me-text > p{
+            font-size: 80%;
         }
 
-        .content-wrapper{
-            padding-left: 5%;
-            max-width: 500px;
+        #about-me-title{
+            font-size: 300%;
+        }
+        
+        #about-me-text{
+            padding-top: 3%;
+            max-width: 550px;
         }
 
-        .about-me-component{
-            align-items: start;
-        }
-    }
-
-    @media screen and (min-width:700px){
-        .picture{
-            width: 60%;
-        }
-    }
-
-    @media screen and (min-width:950px) {
-        .my-picture{
-            z-index: 3;
-            padding-right: 5%;
-        }
-
-        .picture{
-            width: 50%;
+        #about-me-text > p ~ p{
+            margin-top: 3%;
         }
     }
     

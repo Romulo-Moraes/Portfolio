@@ -11,7 +11,7 @@
 </script>
 
 <template>
-        <Overlay color="black" :opacity="0.6" :zindex="1" height="95px"/>
+        <Overlay color="black" :opacity="0.7" :zindex="1" height="100%"/>
 
         <div class="app-header">
             <div class="name">
@@ -27,7 +27,7 @@
     .app-header{
         position: relative;
         width: 100%;
-        height: inherit;
+        height: 100%;
         display: grid;
         grid-template-columns: 50% 50%;
         grid-template-rows: 100%;
@@ -54,12 +54,20 @@
     }
 
     .options-place{
-        padding-top: 25px;
         grid-area: options;
         display: flex;
         flex-direction: column;
         align-items: end;
     }
 
+    @media screen and (orientation: landscape){
+        .app-header{
+            grid-template-columns: 40% 60%;
+        }
 
+        .name{
+            font-size: 155%;
+            justify-content: right;
+        }
+    }
 </style>
