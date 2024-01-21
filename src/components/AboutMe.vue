@@ -28,7 +28,7 @@ import { ref } from 'vue';
         data(){
             return {
                 dynamicAboutMeClass : ref('about-me-text'),
-                dynamicAboutMeTitleClass : ref('about-me-title'),
+                dynamicAboutMeTitleClass : ref('section-title'),
                 pictureElementReference : ref(null),
                 showImageButtonReference : ref(null)
             }
@@ -55,16 +55,13 @@ import { ref } from 'vue';
         </div>
 
         <div class="show-image-button-placeholder">
-            <Button ref="showImageButtonReference" @click="togglePictureView" fontSize="110%"/>
+            <Button ref="showImageButtonReference" @click="togglePictureView" fontSize="135%"/>
         </div>
     </section>
 </template>
 
 <style>
-    .content-wrapper{
-        width: 85%;
-        z-index: 3;
-    }
+   
 
     #about-me-text > p ~ p{
         margin-top: 7%;
@@ -97,6 +94,7 @@ import { ref } from 'vue';
     }
 
     .about-me-component{
+        background-color: black;
         position: relative;
         width: 100%;
         height: auto;
@@ -121,7 +119,7 @@ import { ref } from 'vue';
         position: relative;
         padding-top: 5%;
         font-size: 140%;
-        opacity: 0.1;
+        opacity: 0.05;
     }
 
     .about-me-title{

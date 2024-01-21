@@ -4,16 +4,19 @@
   import ArrowDown from '@/components/ArrowDown.vue';
   import Overlay from '@/components/Overlay.vue';
   import AboutMe from '@/components/AboutMe.vue';
-import { ref } from 'vue';
+  import Skills from '@/components/Skills.vue';
+  import { ref } from 'vue';
+
 
   export default{
     components: {
-      AppHeader,
-      Apresentation,
-      ArrowDown,
-      Overlay,
-      AboutMe
-    },
+    AppHeader,
+    Apresentation,
+    ArrowDown,
+    Overlay,
+    AboutMe,
+    Skills
+  },
     
     data(){
       return {
@@ -56,6 +59,9 @@ import { ref } from 'vue';
       <section id="about-me">
         <AboutMe />
       </section>
+      <section id="skills">
+        <Skills/>
+      </section>
     </main>
     
   </div>
@@ -83,7 +89,6 @@ import { ref } from 'vue';
       display: flex;
       justify-content: center;
       align-items: center;
-      background-color: black;
       grid-area: about-me;
     }
 

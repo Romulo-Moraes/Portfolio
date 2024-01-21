@@ -1,20 +1,23 @@
 <script >
-    import Overlay from '@/components/Overlay.vue';
+    import Technology from '@/components/Technology.vue';
 
     export default{
         name : 'tests',
 
         components: {
-            Overlay
+            Technology
         }
     }
 </script>
 
 <template>
-    <div>
-        <Overlay color="black" :opacity="1"/>
+    <div class="padding">
+        <Technology image="html.png" techName="Express framework" dotTranslate="-70%"/>
     </div>
 </template>
 
 <style> 
+    .padding{
+        padding: 100px;
+    }
 </style>
