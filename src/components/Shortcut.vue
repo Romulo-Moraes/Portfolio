@@ -7,7 +7,8 @@
             'content',
             'theContentIsString',
             'adjustImageDimensions',
-            'shortcutText'
+            'shortcutText',
+            'redirectTo'
         ],
 
         computed: {
@@ -75,30 +76,42 @@
 </script>
 
 <template>
+    
     <section ref="componentRef" class="shortcut-component">
-        <div class="optionCircle" :style="cssProps">
-            <p v-if="theContentIsString">{{ content }}</p>
-            <img v-else :src="getImageURL()" alt="">
-        </div>
-        <p class="component-text">{{ shortcutText }}</p>
+        <a class="shortcut-link" :href="this.$props.redirectTo">
+            <div class="optionCircle" :style="cssProps">
+                <p v-if="theContentIsString">{{ content }}</p>
+                <img v-else :src="getImageURL()" alt="">
+            </div>
+            <p class="component-text">{{ shortcutText }}</p>
+        </a>    
     </section>
+    
 </template>
 
 <style>
-    .shortcut-component{
-        position: relative;
+    .shortcut-link{
+        text-decoration: none;
+        color: white;
         display: flex;
         flex-direction: column;
-        justify-content: center;
         align-items: center;
-        padding-top: 15%;
+    }
+
+    .shortcut-component{
+        position: relative;
         opacity: 0;
         z-index: 4;
+    }
+
+    .shortcut-component ~ .shortcut-component{
+        padding-top: 15%;
     }
 
     .component-text{
         margin: 0;
         color: white;
+        text-align: center;
     }
 
     .optionCircle{

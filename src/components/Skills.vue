@@ -13,7 +13,7 @@
 <template>
     <section class="skills-component">
         <div class="content-wrapper">
-            <h1 class="section-title" id="skills-title">Minhas competências</h1>
+            <h1 class="section-title">Minhas competências</h1>
             <section class="skills-wrapper">
                 <div class="skills">
                     <section class="skill-placeholder">
@@ -35,7 +35,7 @@
                     <section class="skill-placeholder">
                         <Skill title="Desenvolvimento para baixo nível" description="Para desenvolvimento de aplicações de baixo nível, seja por estudo ou para projetos, eu faço uso das seguintes tecnologias:">                        
                             <Technology image="assembly.png" techName="Assembly" dotTranslate="-70%"/>
-                            <Technology image="nasm.png" techName="Express Framework" dotTranslate="-70%"/>
+                            <Technology image="nasm.png" techName="Nasm assembler" dotTranslate="-70%"/>
                         </Skill>
                     </section>
                     
@@ -75,7 +75,7 @@
     }
 
     .skills{
-        width: 90%;
+        width: 100%;
         display: flex;
         flex-direction: column;
     }
@@ -93,10 +93,6 @@
         display: flex;
         justify-content: center;
         align-items: center;
-    }
-
-    #skills-title{
-        line-height: 100%;
     }
 
     @media screen and (orientation: landscape){

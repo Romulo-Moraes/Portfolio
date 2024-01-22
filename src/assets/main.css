@@ -3,9 +3,32 @@
   color: #00C2FF;
   font-size: 300%;
   opacity: 1;
+  line-height: 100%;
+}
+
+
+.about-section{
+  margin-top: 5%;
+  font-size: 120%;
 }
 
 .content-wrapper{
-  width: 85%;
+  width: 95%;
   z-index: 3;
+}
+
+figure{
+  text-align: center;
+}
+
+p{
+  color: #DADADA;
+}
+
+ul > li ~ li{
+  padding-top: 5%;
+}
+
+ul{
+  padding-left: 5%;
 }

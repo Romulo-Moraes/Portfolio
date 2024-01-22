@@ -36,6 +36,10 @@
   --section-gap: 160px;
 }
 
+:root{
+  scroll-behavior: smooth;
+}
+
 *,
 *::before,
 *::after {

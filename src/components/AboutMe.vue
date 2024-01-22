@@ -76,7 +76,6 @@ import { ref } from 'vue';
     .my-picture{
         transition: 1s;
         width: 100%;
-        height: 100%;
         position: absolute;
         display: flex;
         justify-content: center;
@@ -103,7 +102,6 @@ import { ref } from 'vue';
         justify-content: center;
         align-items: center;
         flex-direction: column;
-        padding-top: 2%;
     }
 
     .about-me-text{

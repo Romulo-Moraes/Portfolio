@@ -1,19 +1,45 @@
 <script>
+import { ref } from 'vue';
+
     export default{
         props: [
             'color',
             'opacity',
             'zindex',
-            'height'
+            'height',
+            'startInvisible'
         ],
         
         computed: {
+            style(){
+
+            },
+
             cssProps(){
                 return {
                     '--overlay-background-color' : this.$props.color,
-                    '--overlay-opacity' : this.$props.opacity,
+                    '--overlay-opacity' : (this.$props.startInvisible == true ? 0 : this.$props.opacity),
                     '--overlay-z-index' : this.$props.zindex,
                     '--overlay-height' : this.$props.height
+                }
+            }
+        },
+
+        data(){
+            return {
+                overlayReference : ref(null)      
+            }
+        },
+
+        methods: {
+            toggleOverlayOpacity(){
+                switch(Number(this.$refs.overlayReference.style.opacity)){
+                    case 0:
+                        this.$refs.overlayReference.style.opacity = this.$props.opacity;
+                        break;
+                    default:
+                        this.$refs.overlayReference.style.opacity = 0;
+                        break
                 }
             }
         }
@@ -21,7 +47,7 @@
 </script>
 
 <template>
-    <div class="configurableOverlay" :style="cssProps">
+    <div class="configurableOverlay" :style="cssProps" ref="overlayReference">
         
     </div>
 </template>

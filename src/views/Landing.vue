@@ -1,10 +1,12 @@
-<script lang="ts">
+<script>
   import AppHeader from '@/components/AppHeader.vue';
   import Apresentation from '@/components/Apresentation.vue';
   import ArrowDown from '@/components/ArrowDown.vue';
   import Overlay from '@/components/Overlay.vue';
   import AboutMe from '@/components/AboutMe.vue';
   import Skills from '@/components/Skills.vue';
+  import Projects from '@/components/Projects.vue';
+  import Contacts from '@/components/Contacts.vue';
   import { ref } from 'vue';
 
 
@@ -15,8 +17,10 @@
     ArrowDown,
     Overlay,
     AboutMe,
-    Skills
-  },
+    Skills,
+    Projects,
+    Contacts    
+},
     
     data(){
       return {
@@ -53,7 +57,7 @@
       <AppHeader />
     </header>
     <main>
-        <section id="first-page" ref="firstPageElementReference">
+      <section id="first-page" ref="firstPageElementReference">
         <Apresentation />
       </section>
       <section id="about-me">
@@ -61,6 +65,12 @@
       </section>
       <section id="skills">
         <Skills/>
+      </section>
+      <section id="projects">
+        <Projects />
+      </section>
+      <section id="contacts">
+        <Contacts/>
       </section>
     </main>
     
