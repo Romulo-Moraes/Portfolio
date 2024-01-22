@@ -28,7 +28,7 @@ import DataHighlight from './DataHighlight.vue';
                 
                 <article class="contact">
                     <h1>CV e Cover letter</h1>
-                    <p>Você pode também fazer o download de uma cópia da minha Cover letter e também do meu CV, a onde as informações estão mais formalizadas.</p>
+                    <p>Você pode fazer o download de uma cópia da minha Cover letter e também do meu CV, a onde as informações estão mais formalizadas.</p>
                     
                     <div class="data-highlight">
                         <DataHighlight data="Cover letter" :dataIsPlainText="false" fontSize="15px" icon="pdfIcon.png" componentWidth="150px"/>
