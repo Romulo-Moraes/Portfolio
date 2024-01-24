@@ -44,7 +44,7 @@ import { ref } from 'vue';
             <img class="picture" src="./../assets/images/me.png" alt="">
         </div>
 
-        <div class="content-wrapper">
+        <div class="about-me-wrapper">
             <h1 :class="this.dynamicAboutMeTitleClass" id="about-me-title">Sobre mim</h1>
         
             <div :class="this.dynamicAboutMeClass" id="about-me-text">
@@ -61,7 +61,10 @@ import { ref } from 'vue';
 </template>
 
 <style>
-   
+    .about-me-wrapper{
+        width: 95%;
+        z-index: 3;
+    }
 
     #about-me-text > p ~ p{
         margin-top: 7%;
@@ -93,7 +96,6 @@ import { ref } from 'vue';
     }
 
     .about-me-component{
-        background-color: black;
         position: relative;
         width: 100%;
         height: auto;
@@ -157,4 +159,70 @@ import { ref } from 'vue';
         }
     }
     
+    @media screen and (orientation: landscape) and (min-width: 780px) {
+        .picture{
+            width: 40%;
+        }
+
+        #about-me-text > p{
+            font-size: 90%;
+        }
+
+        #about-me-title{
+            font-size: 320%;
+        }
+    }
+
+    @media screen and (orientation: landscape) and (min-width: 836px) {
+        button.show-image-button{
+            display: none;
+        }
+
+        .my-picture{
+            justify-content: right;
+            z-index: 2;
+            padding-right: 5%;
+        }
+        .picture{
+            width: 37.5%;
+        }
+
+        #about-me-text > p{
+            font-size: 90%;
+        }
+
+        #about-me-text{
+            max-width: 550px;
+        }
+    }
+
+    @media screen and (orientation: landscape) and (min-width: 1100px) {
+        .about-me-wrapper{
+            width: 90%;
+            z-index: 3;
+        }
+
+        button.show-image-button{
+            display: none;
+        }
+        
+        .my-picture{
+            justify-content: right;
+            z-index: 2;
+            padding-right: 5%;
+        }
+
+        .picture{
+            width: 37.5%;
+        }
+
+        #about-me-text > p{
+            font-size: 110%;
+        }
+
+        #about-me-text{
+            max-width: 750px;
+        }
+    }
+
 </style>

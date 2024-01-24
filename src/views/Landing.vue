@@ -118,7 +118,7 @@
     #view-header{
       z-index: 3;
       position: relative;
-      height: 13dvh;
+      height: 120px;
     }
 
     main{
@@ -151,6 +151,12 @@
         flex-direction: column;
         position: relative;
         height: 80dvh;
+      }
+    }
+
+    @media screen and (orientation: landscape) and (min-height: 353px){
+      #view-header{
+        height: 18dvh;
       }
     }
 </style>

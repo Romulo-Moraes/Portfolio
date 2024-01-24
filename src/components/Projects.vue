@@ -15,13 +15,13 @@
         <div class="content-wrapper projects-component-content-wrapper">
             <h1 class="section-title">Projetos</h1>
             <p class="about-section">Ao longo dos anos nos quais eu me dediquei à T.I, eu criei vários projetos nos quais hoje são open-source,
-                desde bibliotecas a até projetos que se originaram através de pesquisas. Aqui estão todos nos quais eu mais 
+                desde bibliotecas a até projetos que se originaram através de pesquisas. <br/> <br/> Aqui estão todos nos quais eu mais 
                 me orgulho de ter criado e o que eu aprendi em cada um deles:
             </p>
             <section class="projects-wrapper">
                     <div class="projects">
                         <section class="project-placeholder">
-                            <Project projectNameBarMarginLeft="8%" projectTitle="Rclock" projectImage="rclockCover.png" projectLink="https://github.com/Romulo-Moraes/Rclock" generalAchievements="Esse projeto foi um dos que mais me fizeram aprender sobre a linguagem C e também sobre documentação e planejamento de projetos." projectImageCaption="Imagem de exemplo do Rclock com a cor vermelha" aboutProject="O Rclock é um software no qual cria um relógio digital diretamente em interfaces de linha de comando, o conhecido terminal. Ele foi planejado para ter um número interessante de customizações nas quais possibilitam qualquer usuário criar um relógio digital do seu gosto no próprio Desktop.">
+                            <Project projectNameBarMarginLeft="8%" projectTitle="Rclock" projectImage="rclockCover.png" projectLink="https://github.com/Romulo-Moraes/Rclock" generalAchievements="Esse projeto foi um dos que mais me fizeram aprender sobre a linguagem C e também sobre documentação e planejamento de projetos." projectImageCaption="Imagem de exemplo do Rclock com a cor vermelha" aboutProject="O Rclock é um software no qual cria um relógio digital diretamente em interfaces de linha de comando, o conhecido terminal. <br/> <br/>Ele foi planejado para ter um número interessante de customizações nas quais possibilitam qualquer usuário criar um relógio digital do seu gosto no próprio Desktop.">
                                 <ul>
                                     <li>Usei de forma inteligente o planejamento, design de projeto, documentação e tópicos da engenharia de software em geral</li>
                                     <li>Consegui ter um maior entendimento da biblioteca Ncurses, usada para manipular o terminal</li>
@@ -34,7 +34,7 @@
                         </section>
 
                         <section class="project-placeholder">
-                            <Project minProjectNameWidth="260px" projectImageCaption="Imagem de capa do projeto no Github" projectNameBarMarginLeft="0%" projectTitle="Assembly toolkit" generalAchievements="O Assembly toolkit foi um projeto baseado em pesquisa no qual me fez entender muita coisa nas quais normalmente não se tem contato com linguagens de mais alto nível." projectImage="assemblyToolkitCover.png" projectLink="https://github.com/Romulo-Moraes/Assembly-Toolkit" aboutProject="Assembly toolkit é um projeto que reune conhecimentos e códigos da linguagem assembly e da programação em baixo nível no geral.. O repositório trata principalmente de ambientes Linux, do conjunto de instruções da arquitetura x86_64 e do assembler Nasm. Há vários tópicos no Assembly toolkit nos quais ajudam a entender como as coisas funcionam por baixo dos panos, alguns deles são: segmentos de memória, system calls, registradores, funções e mais.">
+                            <Project minProjectNameWidth="260px" projectImageCaption="Imagem de capa do projeto no Github" projectNameBarMarginLeft="0%" projectTitle="Assembly toolkit" generalAchievements="O Assembly toolkit foi um projeto baseado em pesquisa no qual me fez entender muita coisa nas quais normalmente não se tem contato com linguagens de mais alto nível." projectImage="assemblyToolkitCover.png" projectLink="https://github.com/Romulo-Moraes/Assembly-Toolkit" aboutProject="Assembly toolkit é um projeto que reune conhecimentos e códigos da linguagem assembly e da programação em baixo nível no geral. <br/> <br/> O repositório trata principalmente de ambientes Linux, do conjunto de instruções da arquitetura x86_64 e do assembler Nasm. <br/> <br/> Há vários tópicos no Assembly toolkit nos quais ajudam a entender como as coisas funcionam por baixo dos panos, alguns deles são: segmentos de memória, system calls, registradores, funções e mais.">
                                 <ul>
                                     <li>Pesquisei sobre o assembler Nasm</li>
                                     <li>Pesquisei sobre a linguagem de montagem Assembly</li>
@@ -66,10 +66,6 @@
 </template>
 
 <style>
-    .project-placeholder{
-        margin-top: 15%;
-    }
-
 
     .projects-component{
         width: 100%;
@@ -77,11 +73,14 @@
         flex-direction: column;
         align-items: center;
         min-height: 100vh;
-        background-color: black;
     }
 
     .projects{
         width: 100%;
+    }
+
+    .projects:nth-child(1){
+        margin-top: 4%;
     }
 
     .projects-wrapper{
@@ -94,7 +93,18 @@
         padding-top: 10%;
     }
 
-    .project-placeholder{
+
+
+    .project-placeholder ~ .project-placeholder{
         margin-top: 7%;
+    }
+
+    
+
+
+    @media screen and (orientation: landscape) and (min-width: 860px){
+        .projects{
+            width: 90%;
+        }
     }
 </style>

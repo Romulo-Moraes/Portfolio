@@ -39,4 +39,16 @@
             margin-top: 1%;
         }    
     }
+
+    @media screen and (orientation: landscape) and (min-width: 726px){
+        .skills-titles{
+            font-size: 220%;
+        }
+
+        .skills-description{
+            font-size: 140%;
+            max-width: 590px;
+        }
+    }
+
 </style>

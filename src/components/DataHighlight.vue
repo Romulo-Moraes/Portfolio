@@ -28,7 +28,7 @@
 <template>
     <div class="datahighlight-component" :style="cssProps">
         <div v-if="this.$props.dataIsPlainText">
-            <p>{{ this.$props.data }}</p>
+            <p class="highlighted-data">{{ this.$props.data }}</p>
         </div>
         <div class="data-alongside-image" v-else>
             <img class="data-icon" :src="this.getImageURL()" alt="">
@@ -67,5 +67,22 @@
 
     .datahighlight-component ~ .datahighlight-component{
         margin-left: 5%;
+    }
+
+    @media screen and (orientation: landscape) and (min-width: 610px) {
+        .datahighlight-component{
+            margin-top: 3%;
+        }
+    }
+
+    @media screen and (orientation: landscape) and (min-width: 1000px) {
+        .datahighlight-component{
+            margin-top: 1%;
+        }
+
+        .datahighlight-component{
+            font-size: calc(var(--data-font-size) + 4px);
+            width: calc(var(--component-width) + 8px);
+        }
     }
 </style>

@@ -70,4 +70,5 @@
             justify-content: right;
         }
     }
+
 </style>

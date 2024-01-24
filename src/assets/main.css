@@ -21,14 +21,37 @@ figure{
   text-align: center;
 }
 
-p{
+p, li{
   color: #DADADA;
+  text-align: justify;
 }
 
 ul > li ~ li{
-  padding-top: 5%;
+  padding-top: 10px;
 }
 
 ul{
   padding-left: 5%;
+}
+
+body{
+  overflow-x: hidden;
+  background-color:#020202;
+}
+
+@media screen and (orientation: landscape) and (min-width: 726px){
+  .about-section{
+    margin-top: 2%;
+    font-size: 140%;
+  } 
+}
+
+@media screen and (orientation: landscape) and (min-width: 1000px){
+  .about-section{
+    font-size: 160%;
+  } 
+
+  .content-wrapper{
+    width: 87%;
+  }
 }

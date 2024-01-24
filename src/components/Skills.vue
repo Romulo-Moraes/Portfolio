@@ -14,6 +14,7 @@
     <section class="skills-component">
         <div class="content-wrapper">
             <h1 class="section-title">Minhas competências</h1>
+            <p class="about-section about-skills">Aqui estão listadas todas as minhas habilidades nas quais eu uso para resolver os mais diversos problemas em possivelmente diversas áreas.</p>
             <section class="skills-wrapper">
                 <div class="skills">
                     <section class="skill-placeholder">
@@ -70,6 +71,10 @@
 </template>
 
 <style>
+    .about-skills{
+        max-width: 950px;
+    }
+
     .skill-placeholder ~ .skill-placeholder{
         padding-top: 10%;
     }
@@ -89,7 +94,6 @@
     }    
 
     .skills-component{
-        background-color: black;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -97,7 +101,27 @@
 
     @media screen and (orientation: landscape){
         .skill-placeholder ~ .skill-placeholder{
-        padding-top: 5%;
+            padding-top: 5%;
+        }
     }
+
+    @media screen and (orientation: landscape) and (min-width: 860px){
+        .skills{
+            width: 90%;
+        }   
+
+        .skill-placeholder ~ .skill-placeholder{
+            padding-top: 3%;
+        }
+
+        .skills-wrapper{
+            padding-top: 2.5%;
+        }
+    }
+
+    @media screen and (orientation: landscape) and (min-width: 1000px){
+        .skill-placeholder ~ .skill-placeholder{
+            padding-top: 1.5%;
+        }
     }
 </style>

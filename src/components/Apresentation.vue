@@ -57,7 +57,6 @@
     .introduction-text > p{
         margin-top: 10%;
         font-size: 120%;
-        letter-spacing: 1pt;
     }
 
     .introduction-text{
@@ -111,4 +110,25 @@
         }
     }
 
+    @media screen and (orientation: landscape) and (min-width: 800px){
+        .introduction > h1{
+            margin-top: 3%;
+            font-size: 270%;
+            line-height: 125%;
+        }
+
+        .introduction-text > p{
+            font-size: 130%;
+        }
+
+        .introduction-text{
+            max-width: 600px;
+        }
+    }
+
+    @media screen and (orientation: landscape) and (min-width: 1200px){
+        .introduction > h1{
+            margin-top: 1%;
+        }
+    }
 </style>

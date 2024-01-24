@@ -49,10 +49,4 @@
         font-size: var(--button-font-size);
         cursor: pointer;
     }
-
-    @media screen and (min-width:950px){
-        button.show-image-button{
-            display: none;
-        }
-    }
 </style>

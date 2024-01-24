@@ -10,15 +10,17 @@ import DataHighlight from './DataHighlight.vue';
 <template>
     <section class="contacts-component">
         <div class="content-wrapper contacts-component-content-wrapper">
-            <h1 class="section-title">Contatos</h1>
-            <p class="about-section">Achou algo daqui interessante? <br/> Você pode sempre entrar em contato comigo,
-                seja para gerar novas conexões ou caso você ache que minhas habilidades e
-                experiências podem ser úteis para o desenvolvimento de algum projeto.</p>
+            <section>
+                <h1 class="section-title">Contatos</h1>
+                <p class="about-section">Achou algo daqui interessante? <br/> Você pode sempre entrar em contato comigo,
+                    seja para gerar novas conexões ou caso você ache que minhas habilidades e
+                    experiências podem ser úteis para o desenvolvimento de algum projeto.</p>
+            </section>
 
             <section class="contacts">
                 <article class="contact">
                     <h1>E-mail</h1>
-                    <p>Você pode entrar em contato comigo pelo o meu e-mail.</p>
+                    <p class="about-contact">Você pode entrar em contato comigo pelo o meu e-mail.</p>
 
                     <div class="data-highlight">
                         <DataHighlight data="romulo.moraes.dev@gmail.com" :dataIsPlainText="true" fontSize="100%"/>
@@ -28,7 +30,7 @@ import DataHighlight from './DataHighlight.vue';
                 
                 <article class="contact">
                     <h1>CV e Cover letter</h1>
-                    <p>Você pode fazer o download de uma cópia da minha Cover letter e também do meu CV, a onde as informações estão mais formalizadas.</p>
+                    <p class="about-contact">Você pode fazer o download de uma cópia da minha Cover letter e também do meu CV, a onde as informações estão mais formalizadas.</p>
                     
                     <div class="data-highlight">
                         <DataHighlight data="Cover letter" :dataIsPlainText="false" fontSize="15px" icon="pdfIcon.png" componentWidth="150px"/>
@@ -44,7 +46,7 @@ import DataHighlight from './DataHighlight.vue';
 
 <style>
     .data-highlight{
-        display: flex;        
+        display: flex;       
     }
 
     .contacts{
@@ -64,7 +66,6 @@ import DataHighlight from './DataHighlight.vue';
     }
 
     .contacts-component{
-        background-color: black;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -82,6 +83,51 @@ import DataHighlight from './DataHighlight.vue';
 
         .contact ~ .contact{
             margin-top: 5%;
+        }
+    }
+
+    @media screen and (orientation: landscape) and (min-width: 610px) {
+        .contact > p {
+            font-size: 140%;
+        }
+
+        .contacts{
+            width: 90%;
+        }
+
+        .contacts-component-content-wrapper{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .about-contact{
+            max-width: 510px;
+        }
+
+        .contacts{
+            margin-top: 3%;   
+        }
+    }
+
+    @media screen and (orientation: landscape) and (min-width: 812px) {
+        .about-contact{
+            max-width: 700px;
+        }
+    }
+
+    @media screen and (orientation: landscape) and (min-width: 1000px) {
+        .contact > p {
+            font-size: 140%;
+        }
+
+        .contact > h1{
+            font-size: 200%;
+        }
+
+        .contacts{
+            margin-top: 2%;
         }
     }
 </style>

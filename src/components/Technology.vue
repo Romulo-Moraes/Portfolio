@@ -69,4 +69,23 @@
         background-color: #D9D9D9;
         transform: translateY(var(--tech-dot-translate));
     }
+
+    @media screen and (min-width: 450px){
+        .technology-component{
+        margin-left: 1%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        width: 120px;
+        height: 100px;
+        }
+
+        .tech-image-placeholder{
+            width: 105px;
+        }
+
+        .tech-dot{
+            transform: translate3d(10px, var(--tech-dot-translate), 0);
+        }
+    }
 </style>
