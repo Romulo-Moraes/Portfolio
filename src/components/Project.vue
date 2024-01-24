@@ -3,19 +3,14 @@ import { ref } from 'vue';
 
 export default {
     props: [
-        'projectTitle',
-        'aboutProject',
-        'projectImage',
-        'projectImageCaption',
-        'generalAchievements',
-        'projectLink',
         'minProjectNameWidth',
-        'projectNameBarMarginLeft'
+        'projectNameBarMarginLeft',
+        'projectData'
     ],
 
     methods: {
         getImageURL() {
-            return new URL(`../assets/images/${this.$props.projectImage}`, import.meta.url);
+            return new URL(`../assets/images/${this.$props.projectData.projectImage}`, import.meta.url);
         }
     },
 
@@ -35,7 +30,7 @@ export default {
     },
 
     mounted() {
-        this.$refs.aboutProjectReference.innerHTML = this.$props.aboutProject;
+        this.$refs.aboutProjectReference.innerHTML = this.$props.projectData.aboutProject;
     }
 }
 </script>
@@ -43,25 +38,25 @@ export default {
 <template>
     <section class="project-component">
         <div class="project-name" :style="cssProps">
-            <h1 class="project-name-text">{{ this.$props.projectTitle }}</h1>
+            <h1 class="project-name-text">{{ this.$props.projectData.projectTitle }}</h1>
             <div class="project-name-bar"></div>
         </div>
 
         <p ref="aboutProjectReference"></p>
         <figure>
             <img class="project-image" :src="this.getImageURL()" alt="">
-            <figcaption>{{ this.$props.projectImageCaption }}</figcaption>
+            <figcaption>{{ this.$props.projectData.projectImageCaption }}</figcaption>
         </figure>
 
-        <p class="general-achievements-text">{{ this.$props.generalAchievements }}</p>
+        <p class="general-achievements-text">{{ this.$props.projectData.generalAchievements }}</p>
 
-        <h1 class="what-learned-title">O que eu conquistei com o {{ this.$props.projectTitle }}</h1>
+        <h1 class="what-learned-title">O que eu conquistei com o {{ this.$props.projectData.projectTitle }}</h1>
         <section class="project-achievements">
             <slot />
         </section>
 
 
-        <p class="project-link">Esse projeto pode ser encontrado <a :href="this.$props.projectLink">neste</a> link.</p>
+        <p class="project-link">Esse projeto pode ser encontrado <a :href="this.$props.projectData.projectLink">neste</a> link.</p>
     </section>
 </template>
 

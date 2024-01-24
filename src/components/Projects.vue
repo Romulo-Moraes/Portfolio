@@ -1,11 +1,20 @@
 <script>
     import Project from './Project.vue';
     import Overlay from './Overlay.vue';
+    import ProjectsConstants from '@/helpers/constants/ProjectsConstants.js';
 
     export default{
         components: {
             Project,
             Overlay
+        },
+
+        data(){
+            return {
+                rclockConstants : ProjectsConstants.rclockProjectsConstants,
+                assemblyToolkitConstants : ProjectsConstants.assemblyToolkitConstants,
+                rmatrixConstants : ProjectsConstants.rmatrixConstants
+            }
         }
     }
 </script>
@@ -21,7 +30,7 @@
             <section class="projects-wrapper">
                     <div class="projects">
                         <section class="project-placeholder">
-                            <Project projectNameBarMarginLeft="8%" projectTitle="Rclock" projectImage="rclockCover.png" projectLink="https://github.com/Romulo-Moraes/Rclock" generalAchievements="Esse projeto foi um dos que mais me fizeram aprender sobre a linguagem C e também sobre documentação e planejamento de projetos." projectImageCaption="Imagem de exemplo do Rclock com a cor vermelha" aboutProject="O Rclock é um software no qual cria um relógio digital diretamente em interfaces de linha de comando, o conhecido terminal. <br/> <br/>Ele foi planejado para ter um número interessante de customizações nas quais possibilitam qualquer usuário criar um relógio digital do seu gosto no próprio Desktop.">
+                            <Project :projectData="this.rclockConstants" projectNameBarMarginLeft="8%">
                                 <ul>
                                     <li>Usei de forma inteligente o planejamento, design de projeto, documentação e tópicos da engenharia de software em geral</li>
                                     <li>Consegui ter um maior entendimento da biblioteca Ncurses, usada para manipular o terminal</li>
@@ -34,7 +43,7 @@
                         </section>
 
                         <section class="project-placeholder">
-                            <Project minProjectNameWidth="260px" projectImageCaption="Imagem de capa do projeto no Github" projectNameBarMarginLeft="0%" projectTitle="Assembly toolkit" generalAchievements="O Assembly toolkit foi um projeto baseado em pesquisa no qual me fez entender muita coisa nas quais normalmente não se tem contato com linguagens de mais alto nível." projectImage="assemblyToolkitCover.png" projectLink="https://github.com/Romulo-Moraes/Assembly-Toolkit" aboutProject="Assembly toolkit é um projeto que reune conhecimentos e códigos da linguagem assembly e da programação em baixo nível no geral. <br/> <br/> O repositório trata principalmente de ambientes Linux, do conjunto de instruções da arquitetura x86_64 e do assembler Nasm. <br/> <br/> Há vários tópicos no Assembly toolkit nos quais ajudam a entender como as coisas funcionam por baixo dos panos, alguns deles são: segmentos de memória, system calls, registradores, funções e mais.">
+                            <Project :projectData="this.assemblyToolkitConstants" minProjectNameWidth="260px" projectNameBarMarginLeft="0%">
                                 <ul>
                                     <li>Pesquisei sobre o assembler Nasm</li>
                                     <li>Pesquisei sobre a linguagem de montagem Assembly</li>
@@ -50,7 +59,7 @@
                         </section>
 
                         <section class="project-placeholder">
-                            <Project minProjectNameWidth="140px" projectImageCaption="Imagem de exemplo da R-matrix" projectNameBarMarginLeft="0%" projectTitle="R-matrix" generalAchievements="Mesmo sendo um projeto relativamente simples, eu obtive considerável conhecimento em tópicos que normalmente não são tão discutidos no dia a dia da T.I, mas que fazem total diferença quanto a segurança de aplicações." projectImage="rmatrixCover.png" projectLink="https://github.com/Romulo-Moraes/R-matrix" aboutProject="A R-matrix é um simulador de matrix para interfaces de linha de comando personalizável, permitindo que setups e ambientes possam ter uma composição a mais a o utilizar o aplicativo. O projeto R-matrix foi criado com o objetivo de estudar e entender a linguagem de programação Rust, na qual me chamava atenção por oferecer recursos interessantes para manipulação de memória e segurança entre threads.">
+                            <Project :projectData="this.rmatrixConstants" minProjectNameWidth="140px" projectNameBarMarginLeft="0%">
                                 <ul>
                                     <li>Aprendi sobre a linguagem Rust e seus conceitos de segurança de memória</li>
                                     <li>Obtive um maior entendimento sobre race conditions</li>                                    
