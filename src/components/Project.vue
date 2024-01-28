@@ -81,7 +81,11 @@ export default {
 
 .project-achievements {
     margin-top: 7%;
+    background-color: #2f3135;
+    border-radius: 10px;
+    padding: 3% 6% 3% 6%;        
 }
+
 
 .what-learned-title {
     margin-top: 10%;
@@ -91,6 +95,7 @@ export default {
 .project-image {
     width: 100%;
     margin-top: 5%;
+    border-radius: 10px
 }
 
 .project-name-bar {
@@ -99,6 +104,7 @@ export default {
     height: 5px;
     border-radius: 50px;
     background-color: #abb2bf;
+    margin-top: 1%;
 }
 
 .project-name {
@@ -179,6 +185,7 @@ export default {
 
     .project-achievements {
         font-size: 130%;
+        padding: 2% 4% 2% 4%;        
     }
 
     .project-name-text {

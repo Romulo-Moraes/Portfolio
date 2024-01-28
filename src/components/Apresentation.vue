@@ -16,7 +16,7 @@
         <section class="introduction">
             <h1 class="role">SOFTWARE<span class="possible-breakline"></span> DEVELOPER</h1>
             <div class="introduction-text">
-                <p>Programador e entusiasta da computação que ama estar sempre aprendendo novas coisas sobre programação e tecnologia</p>
+                <p>Programador e entusiasta da computação que ama estar sempre aprendendo novas coisas a respeito de programação e tecnologia</p>
             </div>
         </section>
         <section class="arrow-placeholder">

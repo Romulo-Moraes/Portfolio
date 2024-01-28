@@ -5,7 +5,8 @@
             'dataIsPlainText',
             'data',
             'icon',
-            'componentWidth'
+            'componentWidth',
+            'clickable'
         ],
 
         methods: {
@@ -18,7 +19,8 @@
             cssProps(){
                 return {
                     '--data-font-size' : this.$props.fontSize,
-                    '--component-width' : this.$props.componentWidth
+                    '--component-width' : this.$props.componentWidth,
+                    '--cursor-style' : this.$props.clickable ? 'pointer' : 'text'
                 }
             }
         }
@@ -63,6 +65,7 @@
         border-radius: 5px;
         padding: 6px 10px 6px 10px;
         margin-top: 5%;
+        cursor: var(--cursor-style);
     }
 
     .datahighlight-component ~ .datahighlight-component{

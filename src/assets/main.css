@@ -34,10 +34,6 @@ ul > li ~ li{
   padding-top: 10px;
 }
 
-ul{
-  padding-left: 5%;
-}
-
 body{
   overflow-x: hidden;
   background-color:#020202;

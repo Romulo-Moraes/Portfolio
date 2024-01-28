@@ -102,6 +102,7 @@
         position: relative;
         opacity: 0;
         z-index: 4;
+        cursor: pointer;
     }
 
     .shortcut-component ~ .shortcut-component{

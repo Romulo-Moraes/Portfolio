@@ -50,6 +50,10 @@ import Overlay from './Overlay.vue';
                         }
                     }
                 }, 25);
+            },
+
+            comingSoon(){
+                window.alert('Coming soon!');
             }
         }
     }
@@ -65,11 +69,11 @@ import Overlay from './Overlay.vue';
             </div>
         </div>
         <div class="options-n-shortcuts" ref="optionsAndShortcutsReference">
-            <Shortcut ref="languageShortcutRef" shortcut-text="Língua" backcolor="light" content="PT" :the-content-is-string="true"/>
+            <Shortcut @click="comingSoon" ref="languageShortcutRef" shortcut-text="Língua" backcolor="light" content="PT" :the-content-is-string="true"/>
             <Shortcut ref="aboutMeShortcutRef" redirectTo="#about-me" shortcut-text="Sobre mim" backcolor="dark" content="whoAmI.png" :the-content-is-string="false" adjust-image-dimensions="80%"/>
             <Shortcut ref="abilitiesShortcutRef" redirectTo="#skills" shortcut-text="Habilidades" backcolor="dark" content="abilities.png" :the-content-is-string="false" adjust-image-dimensions="100%"/>
             <Shortcut ref="projectsShortcutRef" redirectTo="#projects" shortcut-text="Projetos" backcolor="dark" content="Projects" :the-content-is-string="true"/>
-            <Shortcut ref="hireMeShortcutRef" redirectTo="#contacts" shortcut-text="Contrate me" backcolor="dark" content="hireMe.png" :the-content-is-string="false" adjust-image-dimensions="100%"/>
+            <Shortcut ref="hireMeShortcutRef" redirectTo="#contacts" shortcut-text="Contatos" backcolor="dark" content="hireMe.png" :the-content-is-string="false" adjust-image-dimensions="100%"/>
         </div>
     </section>
 </template>

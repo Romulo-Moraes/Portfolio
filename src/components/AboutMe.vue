@@ -38,7 +38,7 @@ import { ref } from 'vue';
 
 <template>
     <section class="about-me-component">
-        <Overlay color="black" :opacity="0.7" :zindex="2" height="100%"/>
+        <Overlay color="black" :opacity="0.75" :zindex="2" height="100%"/>
 
         <div ref="pictureElementReference" class="my-picture">
             <img class="picture" src="./../assets/images/me.png" alt="">
@@ -48,9 +48,9 @@ import { ref } from 'vue';
             <h1 :class="this.dynamicAboutMeTitleClass" id="about-me-title">Sobre mim</h1>
         
             <div :class="this.dynamicAboutMeClass" id="about-me-text">
-                <p>Olá! Sou Rômulo Peres de Moraes, sou apaixonado a nível de entusiasmo pela a área de programação e tecnologia.</p>
-                <p>Desde a minha infância eu tenho um interesse genuíno por computadores, passava o dia vendo videos sobre programação, mesmo não entendendo muito sobre o que se falava neles</p>
-                <p>Atualmente eu sempre busco aprender mais sobre a área da T.I, faço contato com linguagens de programação, diferentes sistemas operacionais, estruturas de dados e muito mais.</p>
+                <p>Olá! Sou Rômulo Peres de Moraes, e sou apaixonado pela a área de programação e tecnologia.</p>
+                <p>Desde a minha infância eu tenho um interesse genuíno por computadores, passava o dia inteiro vendo videos sobre programação, mesmo não entendendo muito sobre o que eles falavam.</p>
+                <p>Atualmente eu sempre busco aprender mais sobre a área da T.I, faço contato com diferentes linguagens de programação, diferentes sistemas operacionais, estruturas de dados, conceitos, entre outras coisas.</p>
             </div>
         </div>
 

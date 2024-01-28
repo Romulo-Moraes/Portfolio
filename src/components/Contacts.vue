@@ -3,7 +3,12 @@ import DataHighlight from './DataHighlight.vue';
 
 
     export default{
-    components: { DataHighlight }
+    components: { DataHighlight },
+    methods: {
+        underMaintenance(){
+            window.alert('Under maintenance');
+        }
+    }
 }
 </script>
 
@@ -26,7 +31,7 @@ import DataHighlight from './DataHighlight.vue';
                     <p class="about-contact">Você pode entrar em contato comigo pelo o meu e-mail.</p>
 
                     <div class="data-highlight">
-                        <DataHighlight data="romulo.moraes.dev@gmail.com" :dataIsPlainText="true" fontSize="100%"/>
+                        <DataHighlight :clickable="false" data="romulo.moraes.dev@gmail.com" :dataIsPlainText="true" fontSize="100%"/>
                     </div>
                 </article>
                 
@@ -36,8 +41,8 @@ import DataHighlight from './DataHighlight.vue';
                     <p class="about-contact">Você pode fazer o download de uma cópia da minha Cover letter e também do meu CV, a onde as informações estão mais formalizadas.</p>
                     
                     <div class="data-highlight">
-                        <DataHighlight data="Cover letter" :dataIsPlainText="false" fontSize="15px" icon="pdfIcon.png" componentWidth="150px"/>
-                        <DataHighlight data="CV" :dataIsPlainText="false" fontSize="15px" icon="pdfIcon.png" componentWidth="90px"/>
+                        <DataHighlight @click="underMaintenance" :clickable="true" data="Cover letter" :dataIsPlainText="false" fontSize="15px" icon="pdfIcon.png" componentWidth="150px"/>
+                        <DataHighlight @click="underMaintenance" :clickable="true" data="CV" :dataIsPlainText="false" fontSize="15px" icon="pdfIcon.png" componentWidth="90px"/>
                     </div>
                 </article>
                 

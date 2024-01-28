@@ -13,7 +13,8 @@
             return {
                 rclockConstants : ProjectsConstants.rclockProjectsConstants,
                 assemblyToolkitConstants : ProjectsConstants.assemblyToolkitConstants,
-                rmatrixConstants : ProjectsConstants.rmatrixConstants
+                rmatrixConstants : ProjectsConstants.rmatrixConstants,
+                portfolioConstants : ProjectsConstants.portfolioConstants
             }
         }
     }
@@ -23,11 +24,9 @@
     <section class="projects-component">
         <div class="content-wrapper projects-component-content-wrapper">
             <h1 class="section-title">Projetos</h1>
-            <p class="about-section">Ao longo dos anos nos quais eu me dediquei à T.I, eu criei vários projetos nos quais hoje são open-source,
-                desde bibliotecas a até projetos que se originaram através de pesquisas.
-            </p>
+            <p class="about-section">Desde quando eu comecei a estudar a área de T.I, eu tenho criado projetos, sejam eles mais simples, com o objetivo de colocar em prática algum conhecimento que adquiri recentemente, ou alguns mais complexos, com o objetivo de resolver algum problema.</p>
 
-            <p class="about-section">Aqui estão todos nos quais eu mais me orgulho de ter criado e o que eu aprendi em cada um deles:</p>
+            <p class="about-section">Abaixo estão todos os meus principais projetos open source nos quais eu trabalhei recentemente:</p>
             <section class="projects-wrapper">
                     <div class="projects">
                         <section class="project-placeholder">
@@ -35,10 +34,10 @@
                                 <ul>
                                     <li>Usei de forma inteligente o planejamento, design de projeto, documentação e tópicos da engenharia de software em geral</li>
                                     <li>Consegui ter um maior entendimento da biblioteca Ncurses, usada para manipular o terminal</li>
-                                    <li>Realize um projeto muito bem modularizado, no qual fez com que o repositório ficasse bem simples e fácil de entender</li>
+                                    <li>Realizei um projeto muito bem modularizado, no qual fez com que o repositório ficasse bem simples e fácil de entender</li>
                                     <li>Reutilizei uma outra biblioteca de minha autoria chamada Anemone, para auxiliar no desenvolvimento desse software</li>
                                     <li>Aprimorei minhas habilidades com Git e Github nesse projeto com a feature de submódulo</li>
-                                    <li>Melhoreig minhas habilidades na língua inglesa e obtive um maior feeling para como expressar minhas ideias em determinadas situações</li>
+                                    <li>Melhorei minhas habilidades na língua inglesa e obtive um maior feeling para como expressar minhas ideias em determinadas situações</li>
                                 </ul>
                             </Project>
                         </section>
@@ -51,7 +50,7 @@
                                     <li>Descrevi com o maior número de detalhes possíveis como o computador funciona no baixo nível sem desviar muito da programação</li>
                                     <li>Escrevi a mão, códigos de Assembly para deixar como exemplos</li>
                                     <li>Escrevi códigos em C para fazer exemplos de interoperabilidade com o Assembly através do linker</li>
-                                    <li>Entendi como algumas coisas no baixo nível influência em características de linguagens de alto nível</li>
+                                    <li>Entendi como algumas coisas no baixo nível influenciam em características de linguagens de alto nível</li>
                                     <li>Obtive um maior conhecimento sobre como a CPU funciona</li>
                                     <li>Aprendi um pouco mais sobre o inglês escrevendo esse projeto</li>
                                     <li>Entendi muito mais como as coisas funcionam no baixo nível do computador</li>
@@ -60,12 +59,23 @@
                         </section>
 
                         <section class="project-placeholder">
-                            <Project :projectData="this.rmatrixConstants" minProjectNameWidth="140px" projectNameBarMarginLeft="0%">
+                            <Project :projectData="this.rmatrixConstants" minProjectNameWidth="130px" projectNameBarMarginLeft="0%">
                                 <ul>
                                     <li>Aprendi sobre a linguagem Rust e seus conceitos de segurança de memória</li>
                                     <li>Obtive um maior entendimento sobre race conditions</li>                                    
                                     <li>Obtive um maior entendimento sobre deadlocks</li>
                                     <li>Entendi como o mutex funciona e como eles são úteis em Rust e em outras linguagens como C</li>
+                                </ul>
+                            </Project>
+                        </section>
+
+                        <section class="project-placeholder">
+                            <Project :projectData="this.portfolioConstants" minProjectNameWidth="130px" projectNameBarMarginLeft="0%">
+                                <ul>
+                                    <li>Estudei e coloquei em prática conhecimentos a respeito do framework Vue.js</li>
+                                    <li>Fiz o design do site usando a ferramenta de prototipação Figma.</li>
+                                    <li>Entendi e apliquei o conceito Mobile First</li>
+                                    <li><s>Consegui centralizar uma div</s></li>
                                 </ul>
                             </Project>
                         </section>
