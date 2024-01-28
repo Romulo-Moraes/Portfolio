@@ -57,7 +57,7 @@
     .datahighlight-component{
         width: var(--component-width);
         position: relative;
-        background-color: #111111;
+        background-color: #282A36;
         border: 2px solid #FFD645;
         font-size: var(--data-font-size);
         border-radius: 5px;

@@ -12,9 +12,12 @@ import DataHighlight from './DataHighlight.vue';
         <div class="content-wrapper contacts-component-content-wrapper">
             <section>
                 <h1 class="section-title">Contatos</h1>
-                <p class="about-section">Achou algo daqui interessante? <br/> Você pode sempre entrar em contato comigo,
+                <p class="about-section">Achou algo daqui interessante?</p>
+                <p class="about-section">
+                    Você pode sempre entrar em contato comigo,
                     seja para gerar novas conexões ou caso você ache que minhas habilidades e
-                    experiências podem ser úteis para o desenvolvimento de algum projeto.</p>
+                    experiências podem ser úteis para o desenvolvimento de algum projeto.
+                </p>
             </section>
 
             <section class="contacts">
@@ -51,6 +54,7 @@ import DataHighlight from './DataHighlight.vue';
 
     .contacts{
         margin-top: 10%;
+        width: 100%;
     }
 
     .contact ~ .contact{
@@ -84,15 +88,15 @@ import DataHighlight from './DataHighlight.vue';
         .contact ~ .contact{
             margin-top: 5%;
         }
+
+        .contacts-component-content-wrapper{
+            padding-top: 6%;
+        }
     }
 
     @media screen and (orientation: landscape) and (min-width: 610px) {
         .contact > p {
             font-size: 140%;
-        }
-
-        .contacts{
-            width: 90%;
         }
 
         .contacts-component-content-wrapper{
@@ -114,6 +118,10 @@ import DataHighlight from './DataHighlight.vue';
     @media screen and (orientation: landscape) and (min-width: 812px) {
         .about-contact{
             max-width: 700px;
+        }
+
+        .contacts-component-content-wrapper{
+            padding-top: 4%;
         }
     }
 

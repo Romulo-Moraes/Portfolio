@@ -13,7 +13,7 @@
 <template>
     <section class="skills-component">
         <div class="content-wrapper">
-            <h1 class="section-title">Minhas competências</h1>
+            <h1 class="section-title skills-title">Minhas competências</h1>
             <p class="about-section about-skills">Aqui estão listadas todas as minhas habilidades nas quais eu uso para resolver os mais diversos problemas em possivelmente diversas áreas.</p>
             <section class="skills-wrapper">
                 <div class="skills">
@@ -71,6 +71,10 @@
 </template>
 
 <style>
+    .skills-title{
+        margin-top: 6%;
+    }
+    
     .about-skills{
         max-width: 950px;
     }
@@ -107,7 +111,7 @@
 
     @media screen and (orientation: landscape) and (min-width: 860px){
         .skills{
-            width: 90%;
+            width: 100%;
         }   
 
         .skill-placeholder ~ .skill-placeholder{

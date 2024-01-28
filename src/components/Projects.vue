@@ -24,9 +24,10 @@
         <div class="content-wrapper projects-component-content-wrapper">
             <h1 class="section-title">Projetos</h1>
             <p class="about-section">Ao longo dos anos nos quais eu me dediquei à T.I, eu criei vários projetos nos quais hoje são open-source,
-                desde bibliotecas a até projetos que se originaram através de pesquisas. <br/> <br/> Aqui estão todos nos quais eu mais 
-                me orgulho de ter criado e o que eu aprendi em cada um deles:
+                desde bibliotecas a até projetos que se originaram através de pesquisas.
             </p>
+
+            <p class="about-section">Aqui estão todos nos quais eu mais me orgulho de ter criado e o que eu aprendi em cada um deles:</p>
             <section class="projects-wrapper">
                     <div class="projects">
                         <section class="project-placeholder">
@@ -102,18 +103,19 @@
         padding-top: 10%;
     }
 
-
-
     .project-placeholder ~ .project-placeholder{
         margin-top: 7%;
     }
 
-    
+    @media screen and (orientation: landscape){
+        .project-placeholder ~ .project-placeholder{
+            margin-top: 5%;
+        }
 
 
-    @media screen and (orientation: landscape) and (min-width: 860px){
-        .projects{
-            width: 90%;
+        .projects-component-content-wrapper{
+            padding-top: 5%;
         }
     }
+
 </style>

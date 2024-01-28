@@ -26,12 +26,13 @@
 
     .skills-titles{
         font-size: 190%;
+        color: #abb2bf;
     }
 
     .skills-description{
         margin-top: 1%;
         font-size: 110%;
-        color: #DADADA;
+        color: #fff;
     }
 
     @media screen and (orientation: landscape) {

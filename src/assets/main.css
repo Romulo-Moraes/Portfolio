@@ -4,11 +4,11 @@
   font-size: 300%;
   opacity: 1;
   line-height: 100%;
+  margin-bottom: 2%;
 }
 
 
 .about-section{
-  margin-top: 5%;
   font-size: 120%;
 }
 
@@ -26,6 +26,10 @@ p, li{
   text-align: justify;
 }
 
+p, li{
+  color: #fff;
+}
+
 ul > li ~ li{
   padding-top: 10px;
 }
@@ -39,19 +43,38 @@ body{
   background-color:#020202;
 }
 
+body{
+  background-color: #222428;
+}
+
+p + p {
+  margin-top: 2%;
+}
+
 @media screen and (orientation: landscape) and (min-width: 726px){
   .about-section{
-    margin-top: 2%;
     font-size: 140%;
   } 
+
+  p + p {
+    margin-top: 1%;
+  }  
+}
+
+@media screen and (orientation: landscape) and (min-width: 860px){
+  .content-wrapper{
+    width: 80%;
+  }
 }
 
 @media screen and (orientation: landscape) and (min-width: 1000px){
   .about-section{
     font-size: 160%;
   } 
+}
 
+@media screen and (orientation: landscape) and (min-width: 1330px){
   .content-wrapper{
-    width: 87%;
+    width: 75%;
   }
 }

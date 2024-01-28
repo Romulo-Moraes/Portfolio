@@ -42,7 +42,7 @@ export default {
             <div class="project-name-bar"></div>
         </div>
 
-        <p ref="aboutProjectReference"></p>
+        <div ref="aboutProjectReference"></div>
         <figure>
             <img class="project-image" :src="this.getImageURL()" alt="">
             <figcaption>{{ this.$props.projectData.projectImageCaption }}</figcaption>
@@ -75,8 +75,8 @@ export default {
     color: white;
 }
 
-.project-link>a {
-    color: #CF00FF;
+.project-link > a {
+    color: #d000ff;
 }
 
 .project-achievements {
@@ -98,21 +98,28 @@ export default {
     width: 100%;
     height: 5px;
     border-radius: 50px;
-    background-color: #D9D9D9;
+    background-color: #abb2bf;
 }
 
 .project-name {
     display: flex;
     flex-direction: row;
     align-items: center;
+    margin-bottom: 2%;
+    margin-top: 4%;
 }
 
 .project-name-text {
     font-size: 230%;
     display: inline;
+    color: #abb2bf;
 }
 
 @media screen and (orientation: landscape) {
+
+    .project-name {
+        margin-top: 2%;
+    }
 
     .what-learned-title,
     .project-link {
@@ -126,6 +133,14 @@ export default {
 }
 
 @media screen and (orientation: landscape) and (min-width: 726px) {
+    .project-name {
+        margin-top: 0%;
+    }
+
+    .project-component figcaption{
+        font-size: 125%;
+    }
+
     .skills-titles {
         font-size: 220%;
     }
