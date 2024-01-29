@@ -19,7 +19,7 @@
         },
 
         mounted(){
-            ViewportScroll.addClasses(['about-project'], 200);
+            ViewportScroll.addClassesToFadeIn(['about-project'], "1s");
         }
     }
 </script>
@@ -92,11 +92,6 @@
 <style>
     .project-achievements-item{
         transition: 500ms;
-        opacity: 0;
-    }
-
-    .about-project{
-        transition: 1s;
         opacity: 0;
     }
 

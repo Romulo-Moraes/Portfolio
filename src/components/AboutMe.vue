@@ -35,7 +35,8 @@
         },
 
         mounted(){
-            ViewportScroll.addClasses(['about-me-text-fadein', 'picture-fadein'], 200);
+            ViewportScroll.addClassesToFadeIn(['about-me-text-fadein'], "1s");
+            ViewportScroll.addClassesToFadeIn(['picture'], "1500ms");
         }
     }
 </script>
@@ -45,7 +46,7 @@
         <Overlay color="black" :opacity="0.75" :zindex="2" height="100%"/>
 
         <div ref="pictureElementReference" class="my-picture">
-            <img class="picture picture-fadein" src="./../assets/images/me.png" alt="">
+            <img class="picture" src="./../assets/images/me.png" alt="">
         </div>
 
         <div class="about-me-wrapper">
@@ -65,10 +66,6 @@
 </template>
 
 <style>
-    .about-me-text-fadein{
-        opacity: 0;
-        transition: 1s;
-    }
 
     .about-me-wrapper{
         width: 95%;
@@ -85,13 +82,8 @@
         max-width: 570px;
     }
 
-    .picture-fadein{
-        opacity: 0;
-        transition: 1500ms;
-    }
 
     .my-picture{
-        transition: 1s;
         width: 100%;
         position: absolute;
         display: flex;

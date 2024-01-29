@@ -34,8 +34,8 @@ export default {
         for(let childElement of this.$refs.aboutProjectReference.getElementsByTagName('p')){
             childElement.classList.add('about-project-text');
         }
-
-        ViewportScroll.addClasses(['about-project-text', 'general-achievements-text', 'project-achievements-item'], 200);
+        
+        ViewportScroll.addClassesToFadeIn(['about-project-text', 'general-achievements-text', 'project-achievements-item'], "1s");
     }
 }
 </script>
@@ -67,11 +67,6 @@ export default {
 
 <style>
 
-
-.about-project-text, .general-achievements-text{
-    transition: 1s;
-    opacity: 0;
-}
 
 .project-name-text {
     min-width: var(--project-name-min-width);

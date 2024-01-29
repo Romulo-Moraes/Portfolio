@@ -18,6 +18,10 @@
                     '--tech-dot-translate' : this.$props.dotTranslate
                 }
             }
+        },
+
+        mounted(){
+            ViewportScroll.addClassesToTranslate(['technology-component']);
         }
     }
 </script>

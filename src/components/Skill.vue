@@ -6,7 +6,7 @@
         ],
 
         mounted(){
-            ViewportScroll.addClasses(['skills-description'], 200);
+            ViewportScroll.addClassesToFadeIn(['skills-description'], "2150ms");
         }
     }
 </script>
@@ -37,7 +37,6 @@
         margin-top: 1%;
         font-size: 110%;
         color: #fff;
-        transition: 2150ms;
         opacity: 0;
     }
 
