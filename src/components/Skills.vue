@@ -6,6 +6,10 @@
         components: {
             Skill,
             Technology
+        },
+
+        mounted(){
+            ViewportScroll.addClasses(['about-skills-fadein'], 200);
         }
     }
 </script>
@@ -14,7 +18,7 @@
     <section class="skills-component">
         <div class="content-wrapper">
             <h1 class="section-title skills-title">Minhas competências</h1>
-            <p class="about-section about-skills">Aqui está toda a base de conhecimento que eu tenho sobre a Tecnologia da Informação, separadas por áreas de desenvolvimento e suas tecnologias.</p>
+            <p class="about-section about-skills about-skills-fadein">Aqui está toda a base de conhecimento que eu tenho sobre a Tecnologia da Informação, separadas por áreas de desenvolvimento e suas tecnologias.</p>
             <section class="skills-wrapper">
                 <div class="skills">
                     <section class="skill-placeholder">
@@ -71,6 +75,11 @@
 </template>
 
 <style>
+    .about-skills-fadein{
+        transition: 1300ms;
+        opacity: 0;
+    }
+
     .skills-title{
         margin-top: 6%;
     }

@@ -31,6 +31,11 @@ export default {
 
     mounted() {
         this.$refs.aboutProjectReference.innerHTML = this.$props.projectData.aboutProject;
+        for(let childElement of this.$refs.aboutProjectReference.getElementsByTagName('p')){
+            childElement.classList.add('about-project-text');
+        }
+
+        ViewportScroll.addClasses(['about-project-text', 'general-achievements-text', 'project-achievements-item'], 200);
     }
 }
 </script>
@@ -61,6 +66,13 @@ export default {
 </template>
 
 <style>
+
+
+.about-project-text, .general-achievements-text{
+    transition: 1s;
+    opacity: 0;
+}
+
 .project-name-text {
     min-width: var(--project-name-min-width);
 }
@@ -83,7 +95,7 @@ export default {
     margin-top: 7%;
     background-color: #2f3135;
     border-radius: 10px;
-    padding: 3% 6% 3% 6%;        
+    padding: 3% 6% 3% 6%;
 }
 
 

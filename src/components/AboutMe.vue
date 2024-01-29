@@ -1,7 +1,7 @@
 <script>
     import Overlay from './Overlay.vue';
     import Button from './Button.vue';
-import { ref } from 'vue';
+    import { ref } from 'vue';
 
     export default{
         components: {
@@ -33,6 +33,10 @@ import { ref } from 'vue';
                 showImageButtonReference : ref(null)
             }
         },
+
+        mounted(){
+            ViewportScroll.addClasses(['about-me-text-fadein', 'picture-fadein'], 200);
+        }
     }
 </script>
 
@@ -41,16 +45,16 @@ import { ref } from 'vue';
         <Overlay color="black" :opacity="0.75" :zindex="2" height="100%"/>
 
         <div ref="pictureElementReference" class="my-picture">
-            <img class="picture" src="./../assets/images/me.png" alt="">
+            <img class="picture picture-fadein" src="./../assets/images/me.png" alt="">
         </div>
 
         <div class="about-me-wrapper">
             <h1 :class="this.dynamicAboutMeTitleClass" id="about-me-title">Sobre mim</h1>
         
             <div :class="this.dynamicAboutMeClass" id="about-me-text">
-                <p>Olá! Sou Rômulo Peres de Moraes, e sou apaixonado pela a área de programação e tecnologia.</p>
-                <p>Desde a minha infância eu tenho um interesse genuíno por computadores, passava o dia inteiro vendo videos sobre programação, mesmo não entendendo muito sobre o que eles falavam.</p>
-                <p>Atualmente eu sempre busco aprender mais sobre a área da T.I, faço contato com diferentes linguagens de programação, diferentes sistemas operacionais, estruturas de dados, conceitos, entre outras coisas.</p>
+                <p class="about-me-text-fadein">Olá! Sou Rômulo Peres de Moraes, e sou apaixonado pela a área de programação e tecnologia.</p>
+                <p class="about-me-text-fadein">Desde a minha infância eu tenho um interesse genuíno por computadores, passava o dia inteiro vendo videos sobre programação, mesmo não entendendo muito sobre o que eles falavam.</p>
+                <p class="about-me-text-fadein">Atualmente eu sempre busco aprender mais sobre a área da T.I, faço contato com diferentes linguagens de programação, diferentes sistemas operacionais, estruturas de dados, conceitos, entre outras coisas.</p>
             </div>
         </div>
 
@@ -61,6 +65,11 @@ import { ref } from 'vue';
 </template>
 
 <style>
+    .about-me-text-fadein{
+        opacity: 0;
+        transition: 1s;
+    }
+
     .about-me-wrapper{
         width: 95%;
         z-index: 3;
@@ -74,6 +83,11 @@ import { ref } from 'vue';
         width: 100%;
         border-radius: 30%;
         max-width: 570px;
+    }
+
+    .picture-fadein{
+        opacity: 0;
+        transition: 1500ms;
     }
 
     .my-picture{
@@ -107,11 +121,9 @@ import { ref } from 'vue';
     }
 
     .about-me-text{
-        transition: 1s;
         position: relative;
         padding-top: 5%;
         font-size: 140%;
-        opacity: 1;
     }
 
     .about-me-text-for-picture{
@@ -123,7 +135,6 @@ import { ref } from 'vue';
     }
 
     .about-me-title{
-        transition: 1s;
         color: #00C2FF;
         font-size: 350%;
         opacity: 1;

@@ -3,7 +3,11 @@
         props: [
             'title',
             'description'
-        ]
+        ],
+
+        mounted(){
+            ViewportScroll.addClasses(['skills-description'], 200);
+        }
     }
 </script>
 
@@ -33,6 +37,8 @@
         margin-top: 1%;
         font-size: 110%;
         color: #fff;
+        transition: 2150ms;
+        opacity: 0;
     }
 
     @media screen and (orientation: landscape) {
