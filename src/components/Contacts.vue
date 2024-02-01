@@ -28,7 +28,7 @@ import DataHighlight from './DataHighlight.vue';
             <section class="contacts">
                 <article class="contact">
                     <h1>E-mail</h1>
-                    <p class="about-contact">Você pode entrar em contato comigo pelo o meu e-mail.</p>
+                    <p class="about-contact">Você pode entrar em contato comigo pelo o seguinte e-mail:</p>
 
                     <div class="data-highlight">
                         <DataHighlight :clickable="false" data="romulo.moraes.dev@gmail.com" :dataIsPlainText="true" fontSize="100%"/>
@@ -37,14 +37,24 @@ import DataHighlight from './DataHighlight.vue';
                 
                 
                 <article class="contact">
-                    <h1>CV e Cover letter</h1>
-                    <p class="about-contact">Você pode fazer o download de uma cópia da minha Cover letter e também do meu CV, a onde as informações estão mais formalizadas.</p>
+                    <h1>Github</h1>
                     
-                    <div class="data-highlight">
-                        <DataHighlight @click="underMaintenance" :clickable="true" data="Cover letter" :dataIsPlainText="false" fontSize="15px" icon="pdfIcon.png" componentWidth="150px"/>
-                        <DataHighlight @click="underMaintenance" :clickable="true" data="CV" :dataIsPlainText="false" fontSize="15px" icon="pdfIcon.png" componentWidth="90px"/>
-                    </div>
+                    <p>Meu perfil no GitHub abriga todos os repositórios dos projetos mencionados anteriormente, sendo também o ambiente onde já contribuí para projetos de outros desenvolvedores, com planos de expandir ainda mais minha participação.</p>
+                    <a href="https://github.com/Romulo-Moraes" target="_blank" class="contact-link">
+                        <DataHighlight :clickable="true" data="Github" :dataIsPlainText="false" fontSize="15px" icon="github.png" iconDimensions="35px" borderRadius="5px" componentWidth="120px"/>
+                    </a>
+                    
                 </article>
+
+                <article class="contact">
+    
+                    <h1>LinkedIn</h1>
+                    <p>Além do meu portfólio, meu perfil no LinkedIn apresenta de maneira mais formal e objetiva meus principais projetos e as habilidades que desenvolvi até o momento.</p>
+                    <a href="https://www.linkedin.com/in/r%C3%B4mulo-moraes-81a613231/" target="_blank" class="contact-link">
+                        <DataHighlight :clickable="true" data="LinkedIn" :dataIsPlainText="false" fontSize="15px" icon="linkedin.svg" iconDimensions="35px" borderRadius="5px" componentWidth="120px"/>
+                    </a>
+                </article>
+                
                 
             </section>
             
@@ -53,6 +63,19 @@ import DataHighlight from './DataHighlight.vue';
 </template>
 
 <style>
+    .contact-link{
+        text-decoration: none;
+    }
+
+    .contact{
+        max-width: 600px;
+    }
+
+    .data-highlight-group{
+        display: flex;
+        flex-direction: row;
+    }
+
     .data-highlight{
         display: flex;       
     }
@@ -121,6 +144,8 @@ import DataHighlight from './DataHighlight.vue';
     }
 
     @media screen and (orientation: landscape) and (min-width: 812px) {
+        
+            
         .about-contact{
             max-width: 700px;
         }
@@ -131,6 +156,10 @@ import DataHighlight from './DataHighlight.vue';
     }
 
     @media screen and (orientation: landscape) and (min-width: 1000px) {
+        .contact{
+            max-width: 700px;
+        }
+
         .contact > p {
             font-size: 140%;
         }

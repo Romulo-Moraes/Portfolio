@@ -56,7 +56,7 @@
                                     <li class="project-achievements-item">Escrevi códigos em C para fazer exemplos de interoperabilidade com o Assembly através do linker</li>
                                     <li class="project-achievements-item">Entendi como algumas coisas no baixo nível influenciam em características de linguagens de alto nível</li>
                                     <li class="project-achievements-item">Obtive um maior conhecimento sobre como a CPU funciona</li>
-                                    <li class="project-achievements-item">Aprendi um pouco mais sobre o inglês escrevendo esse projeto</li>
+                                    <li class="project-achievements-item">Aprendi um pouco mais sobre a língua inglesa escrevendo esse projeto</li>
                                     <li class="project-achievements-item">Entendi muito mais como as coisas funcionam no baixo nível do computador</li>
                                 </ul>
                             </Project>
@@ -79,7 +79,6 @@
                                     <li class="project-achievements-item">Estudei e coloquei em prática conhecimentos a respeito do framework Vue.js</li>
                                     <li class="project-achievements-item">Fiz o design do site usando a ferramenta de prototipação Figma.</li>
                                     <li class="project-achievements-item">Entendi e apliquei o conceito Mobile First</li>
-                                    <li class="project-achievements-item"><s>Consegui centralizar uma div</s></li>
                                 </ul>
                             </Project>
                         </section>

@@ -28,7 +28,7 @@
         data(){
             return {
                 dynamicAboutMeClass : ref('about-me-text'),
-                dynamicAboutMeTitleClass : ref('section-title'),
+                dynamicAboutMeTitleClass : ref('about-me-title'),
                 pictureElementReference : ref(null),
                 showImageButtonReference : ref(null)
             }
@@ -43,7 +43,7 @@
 
 <template>
     <section class="about-me-component">
-        <Overlay color="black" :opacity="0.75" :zindex="2" height="100%"/>
+        <div class="about-me-overlay"></div>
 
         <div ref="pictureElementReference" class="my-picture">
             <img class="picture" src="./../assets/images/me.png" alt="">
@@ -53,7 +53,7 @@
             <h1 :class="this.dynamicAboutMeTitleClass" id="about-me-title">Sobre mim</h1>
         
             <div :class="this.dynamicAboutMeClass" id="about-me-text">
-                <p class="about-me-text-fadein">Olá! Sou Rômulo Peres de Moraes, e sou apaixonado pela a área de programação e tecnologia.</p>
+                <p class="about-me-text-fadein">Olá! Sou Rômulo Peres de Moraes, sou uma pessoa apaixonada pela a área de programação e tecnologia.</p>
                 <p class="about-me-text-fadein">Desde a minha infância eu tenho um interesse genuíno por computadores, passava o dia inteiro vendo videos sobre programação, mesmo não entendendo muito sobre o que eles falavam.</p>
                 <p class="about-me-text-fadein">Atualmente eu sempre busco aprender mais sobre a área da T.I, faço contato com diferentes linguagens de programação, diferentes sistemas operacionais, estruturas de dados, conceitos, entre outras coisas.</p>
             </div>
@@ -66,6 +66,15 @@
 </template>
 
 <style>
+    .about-me-overlay{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: black; 
+        opacity: 0.7;
+        z-index: 2;
+    }
+
 
     .about-me-wrapper{
         width: 95%;
@@ -110,6 +119,8 @@
         justify-content: center;
         align-items: center;
         flex-direction: column;
+        background-image: url(./../assets/images/about-me-background.png);
+        background-size: cover;
     }
 
     .about-me-text{
@@ -135,8 +146,8 @@
     .about-me-title-for-picture{
         transition: 1s;
         color: #00C2FF;
-        font-size: 350%;
         opacity: 0.1;
+        font-size: 350%;
     }
 
     @media screen and (orientation: landscape) {
@@ -148,10 +159,14 @@
             font-size: 80%;
         }
 
-        #about-me-title{
+        .about-me-title-for-picture{
             font-size: 300%;
         }
         
+        .about-me-title{
+            font-size: 300%;
+        }
+
         #about-me-text{
             padding-top: 3%;
             max-width: 550px;
@@ -171,7 +186,11 @@
             font-size: 90%;
         }
 
-        #about-me-title{
+        .about-me-title-for-picture{
+            font-size: 320%;
+        }
+
+        .about-me-title{
             font-size: 320%;
         }
     }
@@ -213,6 +232,10 @@
             justify-content: right;
             z-index: 2;
             padding-right: 5%;
+        }
+
+        .about-me-overlay{
+            opacity: 0.92;
         }
 
         .picture{

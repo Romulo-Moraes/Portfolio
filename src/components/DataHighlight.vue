@@ -6,7 +6,9 @@
             'data',
             'icon',
             'componentWidth',
-            'clickable'
+            'clickable',
+            'borderRadius',
+            'iconDimensions'
         ],
 
         methods: {
@@ -20,7 +22,10 @@
                 return {
                     '--data-font-size' : this.$props.fontSize,
                     '--component-width' : this.$props.componentWidth,
-                    '--cursor-style' : this.$props.clickable ? 'pointer' : 'text'
+                    '--cursor-style' : this.$props.clickable ? 'pointer' : 'text',
+                    '--border-radius' : this.$props.borderRadius,
+                    '--icon-width' : this.$props.iconDimensions,
+                    '--icon-height' : this.$props.iconDimensions
                 }
             }
         }
@@ -45,8 +50,9 @@
     }
 
     .data-icon{
-        width: 25px;
-        height: 25px;
+        width: var(--icon-width);
+        height: var(--icon-height);
+        border-radius: var(--border-radius);
     }
 
     .data-alongside-image{

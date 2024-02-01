@@ -39,7 +39,7 @@
                     </section>
                     
                     <section class="skill-placeholder">
-                        <Skill title="Desenvolvimento para baixo nível" description="Desenvolvimento para baixo nível é algo que me fascina desde o meu primeiro contato com esse nicho. Portanto, essas são as tecnologias nas quais me ajudam a escrever alguns bits:">
+                        <Skill title="Desenvolvimento para baixo nível" description="Desenvolvimento para baixo nível é algo que me fascina desde o meu primeiro contato com essa área. Portanto, essas são as tecnologias nas quais me ajudam a escrever alguns bits:">
                             <Technology image="assembly.png" techName="Assembly" dotTranslate="-70%"/>
                             <Technology image="nasm.png" techName="Nasm assembler" dotTranslate="-70%"/>
                         </Skill>

@@ -53,12 +53,5 @@ import { ref } from 'vue';
 </template>
 
 <style>
-    .configurableOverlay{
-        position: absolute;
-        width: 100%;
-        height: var(--overlay-height);
-        background-color: var(--overlay-background-color); 
-        opacity: var(--overlay-opacity);
-        z-index: var(--overlay-z-index);
-    }
+
 </style>

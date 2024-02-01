@@ -22,7 +22,7 @@
 
                 if(this.$props.backcolor == "dark"){
                     returnValue['--shortcut-background-color'] = '#111111';
-                    returnValue['--shortcut-border-color'] = '#FFD645';
+                    returnValue['--shortcut-border-color'] = '#FFFFFF';
                     returnValue['--shortcut-foreground-color'] = 'white';
                 }else{
                     returnValue['--shortcut-background-color'] = '#E2E2E2';

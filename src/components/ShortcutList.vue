@@ -125,10 +125,10 @@ import Overlay from './Overlay.vue';
         z-index: 2;
         border-bottom-left-radius: 10px;
         border-bottom-right-radius: 10px;
-        background-color: rgb(52, 52, 52);
-        border: 3px solid rgb(52, 52, 52);
+        background-color: rgb(65, 105, 225);
+        border: 3px solid rgb(65, 105, 225);
         opacity: 0;
-        transition: 1.5s;
+        transition: 1s;
     }
 
     @media screen and (orientation: landscape){
