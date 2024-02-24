@@ -35,8 +35,7 @@
         },
 
         mounted(){
-            ViewportScroll.addClassesToFadeIn(['about-me-text-fadein'], "1s");
-            ViewportScroll.addClassesToFadeIn(['picture'], "1500ms");
+            ViewportScroll.addClassesToFadeIn(['picture'], "1000ms");
         }
     }
 </script>

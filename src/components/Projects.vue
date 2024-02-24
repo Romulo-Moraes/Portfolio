@@ -16,10 +16,6 @@
                 rmatrixConstants : ProjectsConstants.rmatrixConstants,
                 portfolioConstants : ProjectsConstants.portfolioConstants
             }
-        },
-
-        mounted(){
-            ViewportScroll.addClassesToFadeIn(['about-project'], "1s");
         }
     }
 </script>

@@ -21,7 +21,7 @@
         },
 
         mounted(){
-            ViewportScroll.addClassesToTranslate(['technology-component']);
+            ViewportScroll.addClassesToTranslate(['technology-component'], 120);
         }
     }
 </script>

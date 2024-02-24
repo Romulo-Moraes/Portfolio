@@ -6,10 +6,6 @@
         components: {
             Skill,
             Technology
-        },
-
-        mounted(){
-            ViewportScroll.addClassesToFadeIn(['about-skills'], "1300ms");
         }
     }
 </script>
@@ -48,6 +44,7 @@
                     <section class="skill-placeholder">
                         <Skill title="Desenvolvimento para Linux e aplicações em geral" description="Quando é necessário escrever algum software que precise correr diretamente em cima do sistema operacional, seja por questões de performance ou simplicidade, eu faço uso das seguintes tecnologias:">                        
                             <Technology image="Clang.png" techName="Linguagem C" dotTranslate="-70%"/>
+                            <Technology image="cplusplus.svg" techName="C++" dotTranslate="-70%"/>
                             <Technology image="meson.png" techName="Meson Build System" dotTranslate="-70%"/>
                         </Skill>
                     </section>

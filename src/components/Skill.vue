@@ -3,11 +3,7 @@
         props: [
             'title',
             'description'
-        ],
-
-        mounted(){
-            ViewportScroll.addClassesToFadeIn(['skills-description'], "2150ms");
-        }
+        ]
     }
 </script>
 
@@ -37,7 +33,7 @@
         margin-top: 1%;
         font-size: 110%;
         color: #fff;
-        opacity: 0;
+        opacity: 1;
     }
 
     @media screen and (orientation: landscape) {

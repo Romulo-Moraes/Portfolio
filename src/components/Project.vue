@@ -35,7 +35,7 @@ export default {
             childElement.classList.add('about-project-text');
         }
         
-        ViewportScroll.addClassesToFadeIn(['about-project-text', 'general-achievements-text', 'project-achievements-item'], "1s");
+        ViewportScroll.addClassesToTranslate(['project-achievements-item'], 10);
     }
 }
 </script>

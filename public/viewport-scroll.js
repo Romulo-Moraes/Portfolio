@@ -22,7 +22,6 @@ var ViewportScroll = (() => {
                                 elementToWorkOn.style.opacity = 1;
                                 break;
                             case TRANSLATE_OPERATION:
-                                let offset = 80;
                                 elementToWorkOn.style.transition = "1s";
                                 elementToWorkOn.style.opacity = 1;
                                 elementToWorkOn.style.transform = `translateX(0%)`;
@@ -67,13 +66,13 @@ var ViewportScroll = (() => {
             });
         };
 
-        this.addClassesToTranslate = (classes) => {
+        this.addClassesToTranslate = (classes, offset) => {
             classes.forEach((elementClass) => {
                 let elements = Array.from(document.getElementsByClassName(elementClass));
                 
                 elements.forEach((element) => {
                     element.style.opacity = 0;
-                    element.style.transform = `translateX(${OFFSET}%)`;
+                    element.style.transform = `translateX(${offset}%)`;
                 })
 
                 arrayOfElements.push({
@@ -103,10 +102,10 @@ var ViewportScroll = (() => {
     }
 
     return {
-        addClassesToTranslate : (classes) => {
+        addClassesToTranslate : (classes, offset) => {
             createViewportScrollInstance();
 
-            instance.addClassesToTranslate(classes);
+            instance.addClassesToTranslate(classes, offset);
         },
         addClassesToFadeIn : (classes, delay) => {
             createViewportScrollInstance();

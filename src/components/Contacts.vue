@@ -54,10 +54,7 @@ import DataHighlight from './DataHighlight.vue';
                         <DataHighlight :clickable="true" data="LinkedIn" :dataIsPlainText="false" fontSize="15px" icon="linkedin.svg" iconDimensions="35px" borderRadius="5px" componentWidth="120px"/>
                     </a>
                 </article>
-                
-                
             </section>
-            
         </div>
     </section>
 </template>
