@@ -73,3 +73,13 @@ p + p {
     width: 75%;
   }
 }
+
+::-webkit-scrollbar{
+  background-color: #222428;
+  width: 14px;
+}
+
+::-webkit-scrollbar-thumb{
+    background-color: rgb(65, 105, 225);
+    border-radius: 7px;
+}
