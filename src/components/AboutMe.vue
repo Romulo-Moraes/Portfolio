@@ -53,8 +53,8 @@
         
             <div :class="this.dynamicAboutMeClass" id="about-me-text">
                 <p class="about-me-text-fadein">Olá! Sou Rômulo Peres de Moraes, sou uma pessoa apaixonada pela a área de programação e tecnologia.</p>
-                <p class="about-me-text-fadein">Desde a minha infância eu tenho um interesse genuíno por computadores, passava o dia inteiro vendo videos sobre programação, mesmo não entendendo muito sobre o que eles falavam.</p>
-                <p class="about-me-text-fadein">Atualmente eu sempre busco aprender mais sobre a área da T.I, faço contato com diferentes linguagens de programação, diferentes sistemas operacionais, estruturas de dados, conceitos, entre outras coisas.</p>
+                <p class="about-me-text-fadein">Desde a minha infância eu tenho um interesse genuíno por computadores, passava o dia inteiro vendo videos sobre programação, mesmo não entendendo muito bem sobre o que eles falavam.</p>
+                <p class="about-me-text-fadein">Atualmente eu sempre busco aprender mais sobre a área da tecnologia da informação, faço contato com diferentes linguagens de programação, sistemas operacionais, estruturas de dados, conceitos, entre outras coisas.</p>
             </div>
         </div>
 

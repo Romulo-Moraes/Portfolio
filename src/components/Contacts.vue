@@ -19,8 +19,8 @@ import DataHighlight from './DataHighlight.vue';
                 <h1 class="section-title">Contatos</h1>
                 <p class="about-section">Achou algo daqui interessante?</p>
                 <p class="about-section">
-                    Você pode sempre entrar em contato comigo,
-                    seja para gerar novas conexões ou caso você ache que minhas habilidades e
+                    Você pode entrar em contato comigo a qualquer momento! <br/>
+                    Seja para gerar novas conexões, ou caso você ache que minhas habilidades e
                     experiências podem ser úteis para o desenvolvimento de algum projeto.
                 </p>
             </section>
@@ -28,7 +28,7 @@ import DataHighlight from './DataHighlight.vue';
             <section class="contacts">
                 <article class="contact">
                     <h1>E-mail</h1>
-                    <p class="about-contact">Você pode entrar em contato comigo pelo o seguinte e-mail:</p>
+                    <p class="about-contact">Você pode entrar em contato comigo pelo o meu e-mail:</p>
 
                     <div class="data-highlight">
                         <DataHighlight :clickable="false" data="romulo.moraes.dev@gmail.com" :dataIsPlainText="true" fontSize="100%"/>
@@ -39,7 +39,7 @@ import DataHighlight from './DataHighlight.vue';
                 <article class="contact">
                     <h1>Github</h1>
                     
-                    <p>Meu perfil no GitHub abriga todos os repositórios dos projetos mencionados anteriormente, sendo também o ambiente onde já contribuí para projetos de outros desenvolvedores, com planos de expandir ainda mais minha participação.</p>
+                    <p>Meu perfil no GitHub abriga todos os repositórios dos projetos mencionados anteriormente, sendo também o ambiente onde já contribuí para projetos de outros desenvolvedores.</p>
                     <a href="https://github.com/Romulo-Moraes" target="_blank" class="contact-link">
                         <DataHighlight :clickable="true" data="Github" :dataIsPlainText="false" fontSize="15px" icon="github.png" iconDimensions="35px" borderRadius="5px" componentWidth="120px"/>
                     </a>
