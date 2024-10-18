@@ -50,8 +50,8 @@ import DataHighlight from './DataHighlight.vue';
     
                     <h1>LinkedIn</h1>
                     <p>Além do meu portfólio, meu perfil no LinkedIn apresenta de maneira mais formal e objetiva meus principais projetos e as habilidades que desenvolvi até o momento.</p>
-                    <a href="https://www.linkedin.com/in/r%C3%B4mulo-moraes-81a613231/" target="_blank" class="contact-link">
-                        <DataHighlight :clickable="true" data="LinkedIn" :dataIsPlainText="false" fontSize="15px" icon="linkedin.svg" iconDimensions="35px" borderRadius="5px" componentWidth="120px"/>
+                    <a href="https://www.linkedin.com/in/r%C3%B4mulo-peres-81a613231/" target="_blank" class="contact-link">
+                        <DataHighlight :clickable="true" data="LinkedIn" :dataIsPlainText="false" fontSize="15px" icon="linkedin.svg" iconDimensions="35px" borderRadius="5px" componentWidth="140px"/>
                     </a>
                 </article>
             </section>

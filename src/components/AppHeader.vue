@@ -23,7 +23,7 @@
                 <a href="https://github.com/Romulo-Moraes" target="_blank" title="Perfil Github">
                     <HeaderIcon icon="github-header.svg" color="white"/>
                 </a>
-                <a href="https://www.linkedin.com/in/r%C3%B4mulo-moraes-81a613231/" target="_blank" title="Perfil LinkedIn">
+                <a href="https://www.linkedin.com/in/r%C3%B4mulo-peres-81a613231/" target="_blank" title="Perfil LinkedIn">
                     <HeaderIcon icon="linkedin.svg"/>
                 </a>
             </div>
