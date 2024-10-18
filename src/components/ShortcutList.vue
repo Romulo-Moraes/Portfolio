@@ -19,6 +19,7 @@ import Overlay from './Overlay.vue';
                     abilitiesShortcutRef : ref(null),
                     projectsShortcutRef : ref(null),
                     hireMeShortcutRef : ref(null),
+                    experiencesShortcutRef: ref(null),
                     optionsAndShortcutsReference : ref(null)
                 }
             }
@@ -72,6 +73,7 @@ import Overlay from './Overlay.vue';
             <Shortcut @click="comingSoon" ref="languageShortcutRef" shortcut-text="Língua" backcolor="light" content="PT" :the-content-is-string="true"/>
             <Shortcut ref="aboutMeShortcutRef" redirectTo="#about-me" shortcut-text="Sobre mim" backcolor="dark" content="whoAmI.png" :the-content-is-string="false" adjust-image-dimensions="80%"/>
             <Shortcut ref="abilitiesShortcutRef" redirectTo="#skills" shortcut-text="Habilidades" backcolor="dark" content="abilities.png" :the-content-is-string="false" adjust-image-dimensions="100%"/>
+            <Shortcut ref="experiencesShortcutRef" redirectTo="#experiences" shortcut-text="Experiências" backcolor="dark" content="experiences.png" :the-content-is-string="false" adjust-image-dimensions="100%"/>
             <Shortcut ref="projectsShortcutRef" redirectTo="#projects" shortcut-text="Projetos" backcolor="dark" content="Projects" :the-content-is-string="true"/>
             <Shortcut ref="hireMeShortcutRef" redirectTo="#contacts" shortcut-text="Contatos" backcolor="dark" content="hireMe.png" :the-content-is-string="false" adjust-image-dimensions="100%"/>
         </div>
