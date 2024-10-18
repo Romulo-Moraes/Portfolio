@@ -2,7 +2,7 @@
 import { ref } from 'vue';
 
 export default {
-    props: [
+        props: [
         'minProjectNameWidth',
         'projectNameBarMarginLeft',
         'projectData'
@@ -55,7 +55,7 @@ export default {
 
         <p class="general-achievements-text">{{ this.$props.projectData.generalAchievements }}</p>
 
-        <h1 class="what-learned-title">O que eu conquistei com o {{ this.$props.projectData.projectTitle }}</h1>
+        <h1 class="what-learned-title">O que eu realizei no {{ this.$props.projectData.projectTitle }}</h1>
         <section class="project-achievements">
             <slot />
         </section>

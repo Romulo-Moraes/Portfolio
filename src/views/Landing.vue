@@ -8,6 +8,7 @@
   import Projects from '@/components/Projects.vue';
   import Contacts from '@/components/Contacts.vue';
   import { ref } from 'vue';
+import Experiences from '@/components/Experiences.vue';
 
 
   export default{
@@ -19,7 +20,8 @@
     AboutMe,
     Skills,
     Projects,
-    Contacts    
+    Contacts,
+    Experiences
 },
     
     data(){
@@ -65,6 +67,9 @@
       </section>
       <section id="skills">
         <Skills/>
+      </section>
+      <section id="experiences">
+        <Experiences/>
       </section>
       <section id="projects">
         <Projects />

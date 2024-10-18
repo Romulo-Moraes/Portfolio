@@ -42,7 +42,7 @@ const rmatrixConstants = {
 
 const portfolioConstants = {
     projectTitle : 'Portfolio',
-    projectImage : 'portfolioCover.png',
+    projectImage : 'portifolioCover.png',
     projectLink : 'https://github.com/Romulo-Moraes/Portfolio',
     projectImageCaption : 'Imagem do About Me no portfólio',
     generalAchievements : 'Um portifólio é uma das melhores maneiras de mostrar as suas conquistas e projetos de maneira pública, deixando claro o quanto você evoluiu, desde a sua primeira linha de código até o momento atual.',
