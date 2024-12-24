@@ -39,7 +39,7 @@ import DataHighlight from './DataHighlight.vue';
                 <article class="contact">
                     <h1>Github</h1>
                     
-                    <p>Meu perfil no GitHub abriga todos os repositórios dos projetos mencionados anteriormente, sendo também o ambiente onde já contribuí para projetos de outros desenvolvedores.</p>
+                    <p>O meu perfil no GitHub abriga todos os repositórios dos projetos mencionados anteriormente, sendo também o ambiente onde já contribuí para projetos de outros desenvolvedores.</p>
                     <a href="https://github.com/Romulo-Moraes" target="_blank" class="contact-link">
                         <DataHighlight :clickable="true" data="Github" :dataIsPlainText="false" fontSize="15px" icon="github.png" iconDimensions="35px" borderRadius="5px" componentWidth="120px"/>
                     </a>

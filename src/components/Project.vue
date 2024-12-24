@@ -102,7 +102,7 @@ export default {
 .project-image {
     width: 100%;
     margin-top: 5%;
-    border-radius: 10px
+    border-radius: 7px
 }
 
 .project-name-bar {

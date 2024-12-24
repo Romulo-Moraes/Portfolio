@@ -14,7 +14,8 @@
                 rclockConstants : ProjectsConstants.rclockProjectsConstants,
                 assemblyToolkitConstants : ProjectsConstants.assemblyToolkitConstants,
                 rmatrixConstants : ProjectsConstants.rmatrixConstants,
-                portfolioConstants : ProjectsConstants.portfolioConstants
+                portfolioConstants : ProjectsConstants.portfolioConstants,
+                realSnakeConstants: ProjectsConstants.realSnakeConstants
             }
         }
     }
@@ -39,13 +40,12 @@
                         </section>
 
                         <section class="project-placeholder">
-                            <Project :projectData="this.assemblyToolkitConstants" minProjectNameWidth="260px" projectNameBarMarginLeft="0%">
+                            <Project :projectData="this.realSnakeConstants" minProjectNameWidth="170px" projectNameBarMarginLeft="0%">
                                 <ul>
-                                    <li class="project-achievements-item">Descrevi com o maior número de detalhes possíveis como o computador funciona no baixo nível</li>
-                                    <li class="project-achievements-item">Escrevi a mão, códigos em Assembly para deixar como exemplos</li>
-                                    <li class="project-achievements-item">Escrevi códigos em C para fazer exemplos de interoperabilidade com o Assembly através do linker</li>
-                                    <li class="project-achievements-item">Demonstrei como algumas características do baixo nível influenciam em características de linguagens de alto nível</li>
-                                    <li class="project-achievements-item">Descrevi como o processador de uma máquina funciona, assim como seus componentes internos</li>
+                                    <li class="project-achievements-item">Escrevi o projeto inteiro na linguagem Assembly utilizando a arquitetura x86-16</li>
+                                    <li class="project-achievements-item">Escrevi um bootloader para carregar as instruções e os dados necessários para a execução do jogo</li>
+                                    <li class="project-achievements-item">Fiz o uso de estruturas de dados como Stack e Ring Buffer para resolver problemas lógicos relacionados ao jogo</li>
+                                    <li class="project-achievements-item">Criei um jogo compatível com hardware real que pode ser executado em qualquer máquina com a ajuda de um simples pendrive</li>
                                 </ul>
                             </Project>
                         </section>
@@ -56,6 +56,18 @@
                                     <li class="project-achievements-item">Aprendi sobre conceitos de segurança de memória</li>
                                     <li class="project-achievements-item">Obtive um maior entendimento sobre race conditions e deadlocks, me possibilitando escrever softwares mais seguros e robustos no contexto de concorrência</li>                                    
                                     <li class="project-achievements-item">Compreendi como o Mutual Exclusion (mutex) funciona e como eles são úteis em ambientes de concorrência</li>
+                                </ul>
+                            </Project>
+                        </section>
+
+                        <section class="project-placeholder">
+                            <Project :projectData="this.assemblyToolkitConstants" minProjectNameWidth="260px" projectNameBarMarginLeft="0%">
+                                <ul>
+                                    <li class="project-achievements-item">Descrevi com o maior número de detalhes possíveis como o computador funciona no baixo nível</li>
+                                    <li class="project-achievements-item">Escrevi a mão, códigos em Assembly para deixar como exemplos</li>
+                                    <li class="project-achievements-item">Escrevi códigos em C para fazer exemplos de interoperabilidade com o Assembly através do linker</li>
+                                    <li class="project-achievements-item">Demonstrei como algumas características do baixo nível influenciam em características de linguagens de alto nível</li>
+                                    <li class="project-achievements-item">Descrevi como o processador de uma máquina funciona, assim como seus componentes internos</li>
                                 </ul>
                             </Project>
                         </section>
